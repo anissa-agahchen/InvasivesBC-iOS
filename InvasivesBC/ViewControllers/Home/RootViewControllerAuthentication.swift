@@ -9,7 +9,7 @@
 import Foundation
 import Reachability
 
-extension ViewController {
+extension RootViewController {
     
     /// Show Login - Do not use directly.
     /// Should be only used by showHomePage() after verification

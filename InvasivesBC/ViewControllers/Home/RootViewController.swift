@@ -9,7 +9,7 @@
 import UIKit
 import Reachability
 
-class ViewController: UIViewController, Theme {
+class RootViewController: UIViewController, Theme {
     
     @IBOutlet weak var containerView: UIView!
     

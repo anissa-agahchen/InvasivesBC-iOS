@@ -26,7 +26,7 @@ class LoginViewController: BaseViewController {
     
     // MARK: Outlet Actions
     @IBAction func loginWithIdirAction(_ sender: UIButton) {
-        AuthenticationService.refreshEnviormentConstants(withIdpHint: "idir")
+        AuthenticationService.refreshEnvironmentConstants(withIdpHint: "idir")
         SettingsService.shared.setAuth(type: .Idir)
         AuthenticationService.authenticate { (success) in
             if (!success) {
@@ -38,7 +38,7 @@ class LoginViewController: BaseViewController {
     }
     
     @IBAction func loginWithBCeIDAction(_ sender: UIButton) {
-        AuthenticationService.refreshEnviormentConstants(withIdpHint: "bceid")
+        AuthenticationService.refreshEnvironmentConstants(withIdpHint: "bceid")
         SettingsService.shared.setAuth(type: .BCeID)
         AuthenticationService.authenticate { (success) in
             if (!success) {

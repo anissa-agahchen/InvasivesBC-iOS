@@ -26,7 +26,7 @@ class BaseObject: Object {
     // MARK: Remote Primary key
     @objc dynamic var remoteId: Int = -1
     // MARK: Display label
-    @objc dynamic var displayLable: String = ""
+    @objc dynamic var displayLabel: String = ""
     // MARK: Sync Indicator
     @objc dynamic var sync: Bool = false
     
