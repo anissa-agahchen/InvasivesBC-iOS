@@ -26,13 +26,14 @@ let ApplicationErrorInfoMessageKey: String = "message"
 
 // MARK: StoryboardSegueIdentifier
 //          This enum will show all different storyboard segue id
-public enum StoryboardSegueIdentifier: String {
+public enum StoryboardSegueIdentifier: String, CaseIterable {
+    case showEntryOptions
     case none
 }
 
-// MARK: CellIndentifier
-//          This enum will hold all reuseable identifier of various table view cell
-enum CellIndentifier: String {
+// MARK: CellIdentifier
+//          This enum will hold all reusable identifier of various table view cell
+enum CellIdentifier: String {
     case placeHolder
 }
 
@@ -46,12 +47,15 @@ enum AppImageName: String {
 enum AppStoryBoard: String {
     // Main Story board
     case main = "Main"
+    // Landing Page
+    case landingPage = "LandingPage"
 }
 
 // MARK: StoryBoardIdentifier
 //          Identifier for story board
 enum StoryBoardIdentifier: String {
     case rootController
+    case entryOptionController
 }
 
 // MARK: Model File Name

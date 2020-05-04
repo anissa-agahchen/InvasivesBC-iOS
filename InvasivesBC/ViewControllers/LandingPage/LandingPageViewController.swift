@@ -8,23 +8,47 @@
 
 import UIKit
 
-class LandingPageViewController: UIViewController {
+// LandingPageViewController:
+//  ViewController for User LandingPage / Home Screen / Dashboard
+class LandingPageViewController: BaseViewController {
 
+    
+    // MARK: Variables
+    // EntryOptionViewController Ref
+    weak var entryOptionViewController: EntryOptionViewController?
+    
+    // MARK: Outlet
+    
+    
+    // MARK: View Controller
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Hide Navigation Bar
+        self.setNavigationBar(hidden: true, style: .default)
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        // Getting entry option view controller
+        if segue.appSegueIdentifier == .showEntryOptions {
+            // Setting entryOptionViewController variable
+            self.entryOptionViewController = segue.destination as? EntryOptionViewController
+            // Setting delegate to self
+            self.entryOptionViewController?.delegate = self
+        }
     }
-    */
+    
 
+}
+
+extension LandingPageViewController: EntryOptionDelegate {
+    func didSelect(entryOption: EntryOption) {
+        // TODO: Handle option selection
+        InfoLog("Get selected option: \(entryOption)")
+    }
 }

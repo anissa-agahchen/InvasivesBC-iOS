@@ -17,7 +17,7 @@ class AuthenticationService {
                             idpHint: SSO.idpHint)
     }()
     
-    public static func refreshEnviormentConstants(withIdpHint: String?) {
+    public static func refreshEnvironmentConstants(withIdpHint: String?) {
         var idpHint = getIdpHint()
         
         if let injectedHint = withIdpHint {
