@@ -11,22 +11,22 @@ import UIKit
 class Fonts {
     
     static func getPrimary(size: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue", size: size)!
+        return UIFont.systemFont(ofSize: size, weight: .regular)
     }
     
     static func getPrimaryBold(size: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue-Bold", size: size)!
+        return UIFont.systemFont(ofSize: size, weight: .bold)
     }
     
     static func getPrimaryHeavy(size: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue-Heavy", size: size)!
+        return UIFont.systemFont(ofSize: size, weight: .heavy)
     }
     
     static func getPrimaryLight(size: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue-Light", size: size)!
+        return UIFont.systemFont(ofSize: size, weight: .light)
     }
     
     static func getPrimaryMedium(size: CGFloat) -> UIFont {
-        return UIFont(name: "HelveticaNeue-Medium", size: size)!
+        return UIFont.systemFont(ofSize: size, weight: .medium)
     }
 }

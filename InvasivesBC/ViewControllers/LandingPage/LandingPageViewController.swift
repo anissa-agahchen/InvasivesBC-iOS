@@ -28,6 +28,9 @@ class LandingPageViewController: BaseViewController {
         self.setNavigationBar(hidden: true, style: .default)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.setNavigationBar(hidden: true, style: .default)
+    }
 
     
     // MARK: - Navigation
@@ -50,5 +53,6 @@ extension LandingPageViewController: EntryOptionDelegate {
     func didSelect(entryOption: EntryOption) {
         // TODO: Handle option selection
         InfoLog("Get selected option: \(entryOption)")
+        performSegue(withIdentifier: "showPointPicker", sender: self)
     }
 }

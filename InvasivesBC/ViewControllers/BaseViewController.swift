@@ -41,6 +41,10 @@ class BaseViewController: UIViewController, Theme {
         if let navigationController = self.navigationController {
             navigationController.navigationBar.isHidden = hidden
             navigationController.navigationBar.barStyle = style
+            
+            navigationController.navigationBar.isTranslucent = false
+            navigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+            navigationController.navigationBar.tintColor = Colors.primary
         }
     }
     
