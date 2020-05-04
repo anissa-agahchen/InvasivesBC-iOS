@@ -82,7 +82,6 @@ class AccessService {
     /// Check if the current user has a role that can access this application.
     /// - Parameter completion: Boolean indicating if access is allowed
     public func hasAccess(completion: @escaping(Bool) -> Void) {
-        return completion(true)
         if reachability.connection == .unavailable {
             return completion(SettingsService.shared.userHasAppAccess())
         }
@@ -105,7 +104,6 @@ class AccessService {
             }
         })
     }
-    
     
     /// Send a request for elevated access (Data Editor)
     /// - Parameter completion: Boolean indicating if request was created successfully
