@@ -101,7 +101,7 @@ extension RootViewController {
             
             if (reacahbility.connection == .unavailable) {
                 // 3.1) User is offline
-                return true
+                return SettingsService.shared.userHasAppAccess()
             } else {
                 // 3.2) User is Online and User's token is not expired
                 return AuthenticationService.isAuthenticated()

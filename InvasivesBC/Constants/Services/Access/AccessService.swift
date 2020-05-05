@@ -105,7 +105,6 @@ class AccessService {
         })
     }
     
-    
     /// Send a request for elevated access (Data Editor)
     /// - Parameter completion: Boolean indicating if request was created successfully
     public func sendAccessRequest(completion: @escaping (Bool)->Void) {

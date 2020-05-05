@@ -125,6 +125,7 @@ extension Theme {
         button.layer.cornerRadius = 5
         button.backgroundColor = bg
         button.layer.borderWidth = 1
+        button.tintColor = titleColor
         button.layer.borderColor = borderColor
         button.setTitleColor(titleColor, for: .normal)
     }
