@@ -136,6 +136,7 @@
 		5CAE6050243F8D9800E4744E /* FieldGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE604F243F8D9800E4744E /* FieldGroupTests.swift */; };
 		5CE030A624635E1F00C6B970 /* FormModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE030A524635E1F00C6B970 /* FormModelTests.swift */; };
 		5CE030A824635E4000C6B970 /* NSObjectPropertyListExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE030A724635E4000C6B970 /* NSObjectPropertyListExtension.swift */; };
+		5CE030AA246365BA00C6B970 /* FormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE030A9246365BA00C6B970 /* FormModel.swift */; };
 		D7658CBF16D2EBA8CA95964B /* Pods_InvasivesBC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4C207FA6A9E731E1565C66 /* Pods_InvasivesBC.framework */; };
 /* End PBXBuildFile section */
 
@@ -288,6 +289,7 @@
 		5CAE604F243F8D9800E4744E /* FieldGroupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldGroupTests.swift; sourceTree = "<group>"; };
 		5CE030A524635E1F00C6B970 /* FormModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModelTests.swift; sourceTree = "<group>"; };
 		5CE030A724635E4000C6B970 /* NSObjectPropertyListExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectPropertyListExtension.swift; sourceTree = "<group>"; };
+		5CE030A9246365BA00C6B970 /* FormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModel.swift; sourceTree = "<group>"; };
 		D7FBA663E9B29797DC3DFE8D /* Pods-InvasivesBCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvasivesBCTests.release.xcconfig"; path = "Target Support Files/Pods-InvasivesBCTests/Pods-InvasivesBCTests.release.xcconfig"; sourceTree = "<group>"; };
 		F82DAD2914D8DA07F6141680 /* Pods-InvasivesBC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvasivesBC.debug.xcconfig"; path = "Target Support Files/Pods-InvasivesBC/Pods-InvasivesBC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -740,6 +742,7 @@
 				5C647091243D0A190013720E /* Time.swift */,
 				5CA312952444A1660005AC75 /* Validator.swift */,
 				5CA312972444C5130005AC75 /* FieldGroupModels.swift */,
+				5CE030A9246365BA00C6B970 /* FormModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1123,6 +1126,7 @@
 				5C647090243CDB630013720E /* FieldModels.swift in Sources */,
 				29DADF89244E206B0060628F /* APIService.swift in Sources */,
 				29DADF83244E1E200060628F /* TimePickerViewController.swift in Sources */,
+				5CE030AA246365BA00C6B970 /* FormModel.swift in Sources */,
 				29B1E5D12447811500C44C78 /* HexRule.swift in Sources */,
 				29DADF8C244E3CF30060628F /* LoginViewController.swift in Sources */,
 				29DADF45244E0C130060628F /* Dropdown.swift in Sources */,
