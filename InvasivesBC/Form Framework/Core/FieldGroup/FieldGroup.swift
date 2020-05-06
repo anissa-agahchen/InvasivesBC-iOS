@@ -50,7 +50,7 @@ extension UICollectionView {
 
 
 // MARK: FieldGroup
-// FormGroup: View Class to arrnage and view field elements
+// FormGroup: View Class to arrange and view field elements
 class  FieldGroup: UIView {
     
     // Different FieldCell type associated with CollectionView (Form specific CollectionView)
@@ -61,8 +61,8 @@ class  FieldGroup: UIView {
         case date = "DateFieldCollectionViewCell"
     }
     
-    // MARK: Preseneter
-    weak var preseneter: FieldAuxViewPresenterDelegate?
+    // MARK: Presenter
+    weak var presenter: FieldAuxViewPresenterDelegate?
     
     // MARK: Property: Public
     var fields: [FieldConfig] = [] {
@@ -71,17 +71,17 @@ class  FieldGroup: UIView {
         }
     }
     // MARK: Property: Private
-    // Collection View: Will Display fiels as collection view cell
+    // Collection View: Will Display field as collection view cell
     weak var collectionView: UICollectionView? = nil
     
     // MARK: Public Function
-    // MARK: Initialize FormGroup
+    // MARK: Initialise FormGroup
     public func initialize(with fields: [FieldConfig], in container: UIView) {
         // Set Size
         self.frame = container.bounds
         // Add self to container
         container.addSubview(self)
-        // Add autolayout constraint
+        // Add auto-layout constraint
         self.addConstraints(for: container)
         // Create Collection View
         self.createCollectionView()
@@ -111,7 +111,7 @@ class  FieldGroup: UIView {
             case .Fill:
                 itemWidth = 100 - widthCounter
             }
-            // If the new row witdh + current row width exceeds 100, item will be in the next row
+            // If the new row width + current row width exceeds 100, item will be in the next row
             if (widthCounter + itemWidth) > 100 {
                 // Store previous row's max height
                 rowHeights.append(tempMaxRowItemHeight + assumedCellSpacing)

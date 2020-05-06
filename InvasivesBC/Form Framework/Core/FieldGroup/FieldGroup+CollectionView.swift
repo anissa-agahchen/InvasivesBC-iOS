@@ -23,7 +23,7 @@ extension UICollectionView {
     }
 }
 
-// CollectionView related extension of FielGroup View
+// CollectionView related extension of FieldGroup View
 extension FieldGroup: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     // MARK: UICollectionViewDataSource
@@ -36,7 +36,7 @@ extension FieldGroup: UICollectionViewDataSource, UICollectionViewDelegate, UICo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let config = fields[indexPath.row]
         let cell = collectionView.dequeueReusableFieldCell(type: config.fieldCellType, for: indexPath)
-        cell.initialize(model: config, presenter: self.preseneter)
+        cell.initialize(model: config, presenter: self.presenter)
        return cell
     }
     

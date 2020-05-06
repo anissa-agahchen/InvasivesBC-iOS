@@ -22,4 +22,8 @@ class User: BaseObject {
     
     // PreferredUsername: User's IDR or BCeID
     @objc dynamic var preferredUsername: String = ""
+    
+    override class var remotePrimaryKeyName: String {
+        return "user_id"
+    }
 }

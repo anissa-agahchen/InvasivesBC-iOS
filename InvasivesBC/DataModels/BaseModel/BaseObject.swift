@@ -30,9 +30,17 @@ class BaseObject: Object {
     // MARK: Sync Indicator
     @objc dynamic var sync: Bool = false
     
-    // MARK: Remote Primarky key mapper: Model subclass must override
-    var remotePrimaryKeyName: String {
+    // MARK: Remote Primary key mapper: Model subclass must override
+    class var remotePrimaryKeyName: String {
         return ""
+    }
+    
+    // MARK: Property List
+    static func propertyList() -> [PropertyDescriptor] {
+        var final: [PropertyDescriptor] = []
+        final.append(contentsOf: BaseObject.getPropertyList())
+        final.append(contentsOf: self.getPropertyList())
+        return final
     }
 }
 

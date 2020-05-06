@@ -134,6 +134,8 @@
 		5CAE604D243E6E6500E4744E /* DateFieldCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CAE604B243E6E6500E4744E /* DateFieldCollectionViewCell.xib */; };
 		5CAE604E243E6E6500E4744E /* DateFieldCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE604C243E6E6500E4744E /* DateFieldCollectionViewCell.swift */; };
 		5CAE6050243F8D9800E4744E /* FieldGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE604F243F8D9800E4744E /* FieldGroupTests.swift */; };
+		5CE030A624635E1F00C6B970 /* FormModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE030A524635E1F00C6B970 /* FormModelTests.swift */; };
+		5CE030A824635E4000C6B970 /* NSObjectPropertyListExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE030A724635E4000C6B970 /* NSObjectPropertyListExtension.swift */; };
 		D7658CBF16D2EBA8CA95964B /* Pods_InvasivesBC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4C207FA6A9E731E1565C66 /* Pods_InvasivesBC.framework */; };
 /* End PBXBuildFile section */
 
@@ -171,7 +173,6 @@
 		29B1E5D02447811500C44C78 /* HexRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexRule.swift; sourceTree = "<group>"; };
 		29BA887C2460628300EFA137 /* PointPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PointPicker.storyboard; sourceTree = "<group>"; };
 		29BA887E246062A000EFA137 /* PointPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointPickerViewController.swift; sourceTree = "<group>"; };
-		29DADEF6244E0A3A0060628F /* FoundationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtension.swift; sourceTree = "<group>"; };
 		29DADEF7244E0A3A0060628F /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		29DADEF8244E0A3A0060628F /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		29DADEFA244E0A3A0060628F /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
@@ -285,6 +286,8 @@
 		5CAE604B243E6E6500E4744E /* DateFieldCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateFieldCollectionViewCell.xib; sourceTree = "<group>"; };
 		5CAE604C243E6E6500E4744E /* DateFieldCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFieldCollectionViewCell.swift; sourceTree = "<group>"; };
 		5CAE604F243F8D9800E4744E /* FieldGroupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldGroupTests.swift; sourceTree = "<group>"; };
+		5CE030A524635E1F00C6B970 /* FormModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModelTests.swift; sourceTree = "<group>"; };
+		5CE030A724635E4000C6B970 /* NSObjectPropertyListExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectPropertyListExtension.swift; sourceTree = "<group>"; };
 		D7FBA663E9B29797DC3DFE8D /* Pods-InvasivesBCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvasivesBCTests.release.xcconfig"; path = "Target Support Files/Pods-InvasivesBCTests/Pods-InvasivesBCTests.release.xcconfig"; sourceTree = "<group>"; };
 		F82DAD2914D8DA07F6141680 /* Pods-InvasivesBC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvasivesBC.debug.xcconfig"; path = "Target Support Files/Pods-InvasivesBC/Pods-InvasivesBC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -372,6 +375,7 @@
 				5CAE604F243F8D9800E4744E /* FieldGroupTests.swift */,
 				5CA6E07224475F2100774A28 /* UserModelTest.swift */,
 				5CA5E56F24534BA100280124 /* EntryOptionViewControllerTests.swift */,
+				5CE030A524635E1F00C6B970 /* FormModelTests.swift */,
 			);
 			path = InvasivesBCTests;
 			sourceTree = "<group>";
@@ -797,11 +801,11 @@
 			isa = PBXGroup;
 			children = (
 				29DADEFA244E0A3A0060628F /* ArrayExtension.swift */,
-				29DADEF6244E0A3A0060628F /* FoundationExtension.swift */,
 				29DADEF7244E0A3A0060628F /* StringExtension.swift */,
 				29DADEF8244E0A3A0060628F /* UIViewControllerExtensions.swift */,
 				5C71844B243B896600BF131C /* FoundationExtension.swift */,
 				5C872D332451F36A00CA89CF /* UIKitExtension.swift */,
+				5CE030A724635E4000C6B970 /* NSObjectPropertyListExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1181,6 +1185,7 @@
 				29DADF60244E0C130060628F /* Switcher.swift in Sources */,
 				5CA6E05A24474F8900774A28 /* BaseObject.swift in Sources */,
 				29DADF79244E16F80060628F /* Notifications.swift in Sources */,
+				5CE030A824635E4000C6B970 /* NSObjectPropertyListExtension.swift in Sources */,
 				29DADF68244E148C0060628F /* StatusColor.swift in Sources */,
 				5C718454243B896700BF131C /* Promise.swift in Sources */,
 				5CAE6035243E2D2B00E4744E /* FieldGroup+CollectionView.swift in Sources */,
@@ -1212,6 +1217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C647094243D17B70013720E /* FieldModelTest.swift in Sources */,
+				5CE030A624635E1F00C6B970 /* FormModelTests.swift in Sources */,
 				2944BD242437DD7500826F48 /* InvasivesBCTests.swift in Sources */,
 				29B1E5CB2446524800C44C78 /* LocationServicesTests.swift in Sources */,
 				5CAE603F243E55D100E4744E /* FieldCellTests.swift in Sources */,

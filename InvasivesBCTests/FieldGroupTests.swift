@@ -45,6 +45,7 @@ class FieldGroupTests: XCTestCase {
             // Test  Cell [0]: should be TextFieldCollectionViewCell
             let cell1: TextFieldCollectionViewCell? = groupView.collectionView?.cellForItem(at: IndexPath(row: 0, section: 0)) as? TextFieldCollectionViewCell
             XCTAssertNotNil(cell1)
+            XCTAssert(cell1?.value == "TT")
             
             // Test  Cell [1]: should be TextFieldCollectionViewCell
             let temp = groupView.collectionView?.cellForItem(at: IndexPath(row: 1, section: 0))
