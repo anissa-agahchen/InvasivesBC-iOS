@@ -22,7 +22,6 @@ struct PropertyDescriptor: Equatable, Hashable {
     static func == (lhs: PropertyDescriptor, rhs: PropertyDescriptor) -> Bool {
         return lhs.name == rhs.name && lhs.type == rhs.type && lhs.typeName == rhs.typeName
     }
-    
 }
 //  API to obtain property info of sub class of NSObject
 extension NSObject {

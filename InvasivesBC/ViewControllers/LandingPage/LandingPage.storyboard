@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b1x-lO-jnO">
     <device id="ipad10_5" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -54,10 +54,23 @@
                         <viewLayoutGuide key="safeArea" id="lk8-aS-K07"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <segue destination="tn1-lp-2jo" kind="show" identifier="showPointPicker" id="Oep-4T-Sod"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dG8-La-cAl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-275.1798561151079" y="-250.35971223021585"/>
+        </scene>
+        <!--PointPicker-->
+        <scene sceneID="rtM-bX-3zt">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="PointPicker" storyboardName="PointPicker" referencedIdentifier="PointPicker" id="tn1-lp-2jo" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hte-3v-MF7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N6Z-mX-DSM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="191" y="14"/>
         </scene>
         <!--Entry Option View Controller-->
         <scene sceneID="jIC-ht-ght">

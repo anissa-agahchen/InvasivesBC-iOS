@@ -39,6 +39,7 @@ class FormModelTests: XCTestCase {
         let list = User.propertyList()
         XCTAssert(list.count == 8)
     }
+
     /// Testing layout structure of the FormModel
     func testLayout() {
         // Create VM object

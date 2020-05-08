@@ -27,7 +27,7 @@ class FieldGroupModel: NSObject {
     internal var fieldMap: [String: Field] = [:]
     
     // MARK: Methods
-    // Change: Reciver method to get changes in field value
+    // Change: Receiver method to get changes in field value
     public func change(in field: Field, with index: Int) {}
     
     // Dict Convert
@@ -49,7 +49,7 @@ class FieldGroupModel: NSObject {
         }
     }
     
-    // Remving Observer
+    // Removing Observer
     private func stopObserving() {
         for field in fields {
             field.remove(observer: self)
