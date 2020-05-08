@@ -12,24 +12,24 @@ import MapKit
 class PointPickerViewController: BaseViewController {
     
     // MARK: Constsnts
-    let minPointRadius: Double = 1
-    let maxPointRadius: Double = 100
+    let minArea: Double = 1
+    let maxArea: Double = 100
     let regionRadius: CLLocationDistance = 200
-    let chooseRatiusText = "Tap a new location, or use the slider to add a radius for your work area."
+    let chooseAreaText = "Tap a new location, or use the slider to add an estimated area for your work area."
     let chooseLocationText = "Tap to set a location"
     
     // MARK: Variables
     var locationManager: CLLocationManager = CLLocationManager()
     var locationAuthorizationstatus: CLAuthorizationStatus?
     var currentLocation: CLLocation?
-    var radiusOverlay: MKCircle?
+    var areaOverlay: MKCircle?
     var selectedPoint: CLLocationCoordinate2D? {
         didSet {
             setConfirmButton()
             setState()
         }
     }
-    var radius: Double = 50 {
+    var area: Double = 50 {
         didSet {
             setState()
         }
@@ -44,8 +44,8 @@ class PointPickerViewController: BaseViewController {
     @IBOutlet weak var locationButton: UIButton!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
-    @IBOutlet weak var radiusField: UITextField!
-    @IBOutlet weak var radiusBar: UIView!
+    @IBOutlet weak var areaField: UITextField!
+    @IBOutlet weak var areaBar: UIView!
     @IBOutlet weak var descriptionBar: UIView!
     
     // MARK: States
@@ -64,7 +64,7 @@ class PointPickerViewController: BaseViewController {
     // MARK: Outlet Actions
     @IBAction func okayAction(_ sender: Any) {
         guard let location = selectedPoint else {return}
-        Alert.show(title: "Selected", message: "location:(\(location.latitude), \(location.longitude))\nradius: \(radius)")
+        Alert.show(title: "Selected", message: "location:(\(location.latitude), \(location.longitude))\narea: \(area)")
         print("show form")
     }
     
@@ -73,24 +73,25 @@ class PointPickerViewController: BaseViewController {
     }
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
-        self.radius = Double(sender.value)
+        self.area = Double(sender.value)
     }
     
-    @IBAction func radiusValueChanged(_ sender: UITextField) {
+    @IBAction func areaValueChanged(_ sender: UITextField) {
         guard
             let text = sender.text,
             text.isDouble,
-            Double(text)! >= minPointRadius,
-            Double(text)! <= maxPointRadius
+            Double(text)! >= minArea,
+            Double(text)! <= maxArea
             else {
                 return
         }
-        radius = Double(text)?.roundToDecimal(0) ?? minPointRadius
-        slider.setValue(Float(radius), animated: true)
+        area = Double(text)?.roundToDecimal(0) ?? minArea
+        slider.setValue(Float(area), animated: true)
     }
     
     // MARK: Style & Setup
     func style() {
+        self.title = "Work Area"
         styleFillButton(button: confirmButton)
         styleFillButton(button: locationButton)
         setConfirmButton()
@@ -98,15 +99,15 @@ class PointPickerViewController: BaseViewController {
         setupSlider()
         setState()
         styleCard(layer: descriptionBar.layer)
-        styleCard(layer: radiusBar.layer)
+        styleCard(layer: areaBar.layer)
     }
     
     /// Initialize slider with initial, min and max values & style
     func setupSlider() {
-        slider.minimumValue = Float(minPointRadius)
-        slider.maximumValue = Float(maxPointRadius)
+        slider.minimumValue = Float(minArea)
+        slider.maximumValue = Float(maxArea)
         slider.tintColor = Colors.primary
-        slider.setValue(Float(radius), animated: true)
+        slider.setValue(Float(area), animated: true)
     }
     
     /// show or hide the confirmation button if needed
@@ -117,29 +118,31 @@ class PointPickerViewController: BaseViewController {
     
     /// Set the state of the page: Selecting point or selecting radius
     func setState() {
-        let shouldShowRadius = selectedPoint != nil
-        descriptionLabel.text = shouldShowRadius ? chooseRatiusText : chooseLocationText
+        let shouldShowArea = selectedPoint != nil
+        descriptionLabel.text = shouldShowArea ? chooseAreaText : chooseLocationText
         descriptionLabel.font = Fonts.getPrimaryMedium(size: 17)
-        radiusBar.isHidden = shouldShowRadius ? false : true
-        radiusField.text = "\(radius.roundToDecimal(0))"
+        areaBar.isHidden = shouldShowArea ? false : true
+        areaField.text = "\(area.roundToDecimal(0))"
         animateIt()
         guard let point = selectedPoint else {
             return
         }
-        showRadius(around: point, radius: radius)
-        slider.setValue(Float(radius), animated: true)
+        showArea(around: point, area: area)
+        slider.setValue(Float(area), animated: true)
     }
     
-    /// Display Radius circle overlay at location with given radius.
+    /// Display Circle Area around location with give area
     /// - Parameters:
     ///   - location: coordinates
-    ///   - radius: circle radius
-    func showRadius(around location: CLLocationCoordinate2D, radius: Double) {
-        if let existing = radiusOverlay {
+    ///   - area: circle area
+    func showArea(around location: CLLocationCoordinate2D, area: Double) {
+        if let existing = areaOverlay {
             mapView.removeOverlay(existing)
         }
-        radiusOverlay = MKCircle(center: location, radius: radius)
-        mapView.addOverlay(radiusOverlay!)
+        let radius = sqrt(area / Double.pi)
+        print("area: \(area)\n Radius: \(radius)")
+        areaOverlay = MKCircle(center: location, radius: radius)
+        mapView.addOverlay(areaOverlay!)
     }
 }
 
