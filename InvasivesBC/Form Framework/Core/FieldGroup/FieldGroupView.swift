@@ -11,7 +11,7 @@ import UIKit
 
 // FieldConfig: Extending to support field cell type
 extension FieldConfig {
-    var fieldCellType: FieldGroup.FieldCellType {
+    var fieldCellType: FieldGroupView.FieldCellType {
         switch self.type {
         case .Text:
             return .text
@@ -33,19 +33,19 @@ extension FieldConfig {
 extension UICollectionView {
     // This method will register cell (FieldCellType) with collection view
     // Need to call this method while configuring collection view
-    func register(fieldType: FieldGroup.FieldCellType) {
+    func register(fieldType: FieldGroupView.FieldCellType) {
         let nib: UINib = UINib(nibName: fieldType.rawValue, bundle: nil)
         self.register(nib, forCellWithReuseIdentifier: fieldType.rawValue)
     }
     
     // Get reusable FieldCellType CollectionViewCell
-    func dequeueReusableCell(withFieldType field: FieldGroup.FieldCellType, for path: IndexPath) ->  UICollectionViewCell {
+    func dequeueReusableCell(withFieldType field: FieldGroupView.FieldCellType, for path: IndexPath) ->  UICollectionViewCell {
         return self.dequeueReusableCell(withReuseIdentifier: field.rawValue, for: path)
     }
     
     // This method will Register all FieldCellType with CollectionView
     func registerFieldTypes() {
-        for fieldType in FieldGroup.FieldCellType.allCases {
+        for fieldType in FieldGroupView.FieldCellType.allCases {
             self.register(fieldType: fieldType)
         }
     }
@@ -55,7 +55,7 @@ extension UICollectionView {
 
 // MARK: FieldGroup
 // FormGroup: View Class to arrange and view field elements
-class  FieldGroup: UIView {
+class  FieldGroupView: UIView {
     
     // Different FieldCell type associated with CollectionView (Form specific CollectionView)
     enum FieldCellType: String, CaseIterable {
@@ -158,7 +158,7 @@ class  FieldGroup: UIView {
 }
 
 // MARK: FieldGroup - View Update Functions
-extension FieldGroup {
+extension FieldGroupView {
     // MARK: Private Function
     // Adding auto-layout constraints respect of container view
     private func addConstraints(for view: UIView) {

@@ -23,8 +23,8 @@ struct Layout {
         var header: String = ""
         /// Fields with group
         var fields: [FieldInfo] = []
-        /// Custom Group  or not
-        var isCustom: Bool = false
+        /// Custom Group Cell type
+        var customCellType: FormGroupCellType?
     }
     var groups: [Group] = []
 }

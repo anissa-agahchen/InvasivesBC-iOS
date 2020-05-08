@@ -31,7 +31,7 @@ class FieldGroupTests: XCTestCase {
         container.backgroundColor = .red
         
         // Create FieldGroupView
-        let groupView: FieldGroup = FieldGroup()
+        let groupView: FieldGroupView = FieldGroupView()
         groupView.initialize(with: fields, in: container)
         
         if let window: UIWindow = UIApplication.shared.windows.first {
