@@ -43,7 +43,7 @@ class BaseViewController: UIViewController, Theme {
             navigationController.navigationBar.barStyle = style
             
             navigationController.navigationBar.isTranslucent = false
-            navigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+            navigationController.navigationBar.titleTextAttributes = [.foregroundColor: Colors.primary]
             navigationController.navigationBar.tintColor = Colors.primary
         }
     }

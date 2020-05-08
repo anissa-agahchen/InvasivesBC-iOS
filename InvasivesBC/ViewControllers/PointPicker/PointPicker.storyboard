@@ -64,26 +64,26 @@
                                         <rect key="frame" x="8" y="0.0" width="688" height="55"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hTe-B0-jKd">
-                                                <rect key="frame" x="-2" y="0.0" width="552" height="56"/>
+                                                <rect key="frame" x="-2" y="0.0" width="542" height="56"/>
                                                 <connections>
                                                     <action selector="sliderValueChanged:" destination="iLX-Xb-RbU" eventType="valueChanged" id="NXR-Au-4uD"/>
                                                 </connections>
                                             </slider>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dWP-J5-ENA">
-                                                <rect key="frame" x="563" y="0.0" width="50" height="55"/>
+                                                <rect key="frame" x="553" y="0.0" width="50" height="55"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="TLU-Kh-9hj"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 <connections>
-                                                    <action selector="radiusValueChanged:" destination="iLX-Xb-RbU" eventType="editingChanged" id="ole-R4-bWu"/>
+                                                    <action selector="areaValueChanged:" destination="iLX-Xb-RbU" eventType="editingChanged" id="ole-R4-bWu"/>
                                                 </connections>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="meters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5E-hN-obe">
-                                                <rect key="frame" x="628" y="0.0" width="60" height="55"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="meters²" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5E-hN-obe">
+                                                <rect key="frame" x="618" y="0.0" width="70" height="55"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="Vws-JY-Ucy"/>
+                                                    <constraint firstAttribute="width" constant="70" id="Vws-JY-Ucy"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -123,13 +123,13 @@
                         <viewLayoutGuide key="safeArea" id="ift-L8-sYr"/>
                     </view>
                     <connections>
+                        <outlet property="areaBar" destination="bmh-yv-zlk" id="Hae-KJ-YhX"/>
+                        <outlet property="areaField" destination="dWP-J5-ENA" id="vFy-qD-ryU"/>
                         <outlet property="confirmButton" destination="5io-0P-jgl" id="a02-II-Ca1"/>
                         <outlet property="descriptionBar" destination="1ha-1I-pp7" id="Wh9-FJ-ek6"/>
                         <outlet property="descriptionLabel" destination="n1g-mb-ti9" id="dkr-4j-vqh"/>
                         <outlet property="locationButton" destination="186-Pd-dWw" id="SWX-X9-NrN"/>
                         <outlet property="mapView" destination="zLw-5h-m8S" id="Lb2-Fz-y6y"/>
-                        <outlet property="radiusBar" destination="bmh-yv-zlk" id="Hae-KJ-YhX"/>
-                        <outlet property="radiusField" destination="dWP-J5-ENA" id="vFy-qD-ryU"/>
                         <outlet property="slider" destination="hTe-B0-jKd" id="UUJ-cB-7H7"/>
                     </connections>
                 </viewController>
