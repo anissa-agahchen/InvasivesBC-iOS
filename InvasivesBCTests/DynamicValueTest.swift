@@ -20,7 +20,7 @@ class DynamicValueTest: XCTestCase {
 
     
     // Test to check DynamicValue
-    // 1. Adding observer with immediate value chnage
+    // 1. Adding observer with immediate value chanage
     // 2. Update value observation
     // 3. Remove
     func testDynamicValue() {
