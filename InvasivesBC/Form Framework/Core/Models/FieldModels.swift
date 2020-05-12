@@ -30,6 +30,7 @@ enum FieldType {
     case Stepper
     case Spacer
     case Title
+    case Blank
 }
 
 // Various Field Width Size Class
@@ -219,6 +220,20 @@ class SwitchFieldViewModel: FieldViewModel<Bool> {}
 
 // Date
 class DateFieldViewModel: FieldViewModel<Date?> {}
+
+// Double
+class DoubleFieldViewModel: FieldViewModel<Double> {}
+
+// Integer
+class IntFieldViewModel: FieldViewModel<Int> {}
+
+// Blank Field
+class BlankField: FieldViewModel<Void> {
+    
+    override var type: FieldType {
+        return .Blank
+    }
+}
 
 // Title: Display Section or Group Title
 class TitleFieldViewModel: FieldViewModel<String> {

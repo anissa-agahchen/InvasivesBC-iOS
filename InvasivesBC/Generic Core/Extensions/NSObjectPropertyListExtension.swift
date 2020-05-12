@@ -8,10 +8,15 @@
 
 import Foundation
 
+// MARK: Property Type
+enum PropertyType: String, CaseIterable {
+    case string, `int`, double, object, unknown, bool
+}
+
 // MARK: Property Descriptor
-struct PropertyDescriptor: Equatable {
+struct PropertyDescriptor: Equatable, Hashable {
     var typeName: String = ""
-    var type: String = ""
+    var type: PropertyType = .unknown
     var name: String = ""
     
     static func == (lhs: PropertyDescriptor, rhs: PropertyDescriptor) -> Bool {
@@ -54,7 +59,7 @@ extension NSObject {
             var descriptor: PropertyDescriptor = PropertyDescriptor()
             descriptor.name = name
             if type == "@" { // Object type
-                descriptor.type = "Object"
+                descriptor.type = .object
                 // Getting type name
                 let formatted = mainAttribute.replacingLastOccurrenceOfString("\\", with: "")
                 do {
@@ -65,6 +70,7 @@ extension NSObject {
                         // Handling NSString
                         if typeName.contains("NSString") {
                             descriptor.typeName = "String"
+                            descriptor.type = .string
                         } else {
                             descriptor.typeName = typeName
                         }
@@ -74,13 +80,13 @@ extension NSObject {
                     debugPrint("\(err)")
                 }
             } else if type == "q" { // Int Type
-                descriptor.type = "\(Int.Type.self)"
+                descriptor.type = .int
             } else if type == "d" { // Double type
-                descriptor.type = "\(Double.Type.self)"
+                descriptor.type = .double
             }
             list.append(descriptor)
         }
         
-        return list
+        return Array(Set<PropertyDescriptor>(list))
     }
 }

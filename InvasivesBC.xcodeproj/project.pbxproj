@@ -137,6 +137,10 @@
 		5CE030A624635E1F00C6B970 /* FormModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE030A524635E1F00C6B970 /* FormModelTests.swift */; };
 		5CE030A824635E4000C6B970 /* NSObjectPropertyListExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE030A724635E4000C6B970 /* NSObjectPropertyListExtension.swift */; };
 		5CE030AA246365BA00C6B970 /* FormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE030A9246365BA00C6B970 /* FormModel.swift */; };
+		5CE030AE2464428500C6B970 /* DoubleFieldCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE030AC2464428500C6B970 /* DoubleFieldCollectionViewCell.xib */; };
+		5CE030AF2464428500C6B970 /* DoubleFieldCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE030AD2464428500C6B970 /* DoubleFieldCollectionViewCell.swift */; };
+		5CE030B3246451BA00C6B970 /* IntegerFieldCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE030B1246451BA00C6B970 /* IntegerFieldCollectionViewCell.swift */; };
+		5CE030B4246451BA00C6B970 /* IntegerFieldCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE030B2246451BA00C6B970 /* IntegerFieldCollectionViewCell.xib */; };
 		D7658CBF16D2EBA8CA95964B /* Pods_InvasivesBC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4C207FA6A9E731E1565C66 /* Pods_InvasivesBC.framework */; };
 /* End PBXBuildFile section */
 
@@ -290,6 +294,10 @@
 		5CE030A524635E1F00C6B970 /* FormModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModelTests.swift; sourceTree = "<group>"; };
 		5CE030A724635E4000C6B970 /* NSObjectPropertyListExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectPropertyListExtension.swift; sourceTree = "<group>"; };
 		5CE030A9246365BA00C6B970 /* FormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModel.swift; sourceTree = "<group>"; };
+		5CE030AC2464428500C6B970 /* DoubleFieldCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoubleFieldCollectionViewCell.xib; sourceTree = "<group>"; };
+		5CE030AD2464428500C6B970 /* DoubleFieldCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleFieldCollectionViewCell.swift; sourceTree = "<group>"; };
+		5CE030B1246451BA00C6B970 /* IntegerFieldCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegerFieldCollectionViewCell.swift; sourceTree = "<group>"; };
+		5CE030B2246451BA00C6B970 /* IntegerFieldCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntegerFieldCollectionViewCell.xib; sourceTree = "<group>"; };
 		D7FBA663E9B29797DC3DFE8D /* Pods-InvasivesBCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvasivesBCTests.release.xcconfig"; path = "Target Support Files/Pods-InvasivesBCTests/Pods-InvasivesBCTests.release.xcconfig"; sourceTree = "<group>"; };
 		F82DAD2914D8DA07F6141680 /* Pods-InvasivesBC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvasivesBC.debug.xcconfig"; path = "Target Support Files/Pods-InvasivesBC/Pods-InvasivesBC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -883,6 +891,9 @@
 		5CAE6036243E2E1200E4744E /* Shared Cells */ = {
 			isa = PBXGroup;
 			children = (
+				5CE030B5246455C100C6B970 /* TimeField */,
+				5CE030B02464518500C6B970 /* IntField */,
+				5CE030AB2464428500C6B970 /* DoubleField */,
 				5CAE604A243E6E5300E4744E /* DateField */,
 				5CAE6045243E60C600E4744E /* SwitchField */,
 				5CAE6040243E5E1F00E4744E /* TextAreaField */,
@@ -925,6 +936,31 @@
 				5CAE604B243E6E6500E4744E /* DateFieldCollectionViewCell.xib */,
 			);
 			path = DateField;
+			sourceTree = "<group>";
+		};
+		5CE030AB2464428500C6B970 /* DoubleField */ = {
+			isa = PBXGroup;
+			children = (
+				5CE030AD2464428500C6B970 /* DoubleFieldCollectionViewCell.swift */,
+				5CE030AC2464428500C6B970 /* DoubleFieldCollectionViewCell.xib */,
+			);
+			path = DoubleField;
+			sourceTree = "<group>";
+		};
+		5CE030B02464518500C6B970 /* IntField */ = {
+			isa = PBXGroup;
+			children = (
+				5CE030B1246451BA00C6B970 /* IntegerFieldCollectionViewCell.swift */,
+				5CE030B2246451BA00C6B970 /* IntegerFieldCollectionViewCell.xib */,
+			);
+			path = IntField;
+			sourceTree = "<group>";
+		};
+		5CE030B5246455C100C6B970 /* TimeField */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TimeField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1023,6 +1059,7 @@
 				29DADF61244E0C130060628F /* SwitcherView.xib in Resources */,
 				29DADF55244E0C130060628F /* Options.storyboard in Resources */,
 				29DADF44244E0C130060628F /* Dropdown.storyboard in Resources */,
+				5CE030AE2464428500C6B970 /* DoubleFieldCollectionViewCell.xib in Resources */,
 				29DADF62244E0C130060628F /* SwitcherCollectionViewCell.xib in Resources */,
 				29DADF4B244E0C130060628F /* TableEmptyStateTableViewCell.xib in Resources */,
 				2944BD162437DD7500826F48 /* Assets.xcassets in Resources */,
@@ -1035,6 +1072,7 @@
 				29DADF5F244E0C130060628F /* PDFViewer.xib in Resources */,
 				29B1E5C62446522A00C44C78 /* bcAlbersBoundry.json in Resources */,
 				5CAE6049243E67BC00E4744E /* SwitchFieldCollectionViewCell.xib in Resources */,
+				5CE030B4246451BA00C6B970 /* IntegerFieldCollectionViewCell.xib in Resources */,
 				29DADF82244E1E200060628F /* TimePicker.storyboard in Resources */,
 				29DADFA0244F7AD60060628F /* AwaitingAccessResponse.xib in Resources */,
 				29BA887D2460628300EFA137 /* PointPicker.storyboard in Resources */,
@@ -1155,6 +1193,7 @@
 				29DADF64244E0C130060628F /* SwitcherCollectionViewCell.swift in Sources */,
 				29DADF46244E0C130060628F /* DropdownViewController.swift in Sources */,
 				5C9066172450B61300E2A8CA /* LandingPageViewController.swift in Sources */,
+				5CE030B3246451BA00C6B970 /* IntegerFieldCollectionViewCell.swift in Sources */,
 				29DADF81244E1E200060628F /* TimePicker.swift in Sources */,
 				29DADF53244E0C130060628F /* Alert.swift in Sources */,
 				29DADF75244E15F50060628F /* AppRemoteAPIConst.swift in Sources */,
@@ -1182,6 +1221,7 @@
 				5C872D322450EB6400CA89CF /* EntryOptionViewController.swift in Sources */,
 				29DADF7C244E173D0060628F /* BaseViewController.swift in Sources */,
 				2944BD0F2437DD7200826F48 /* SceneDelegate.swift in Sources */,
+				5CE030AF2464428500C6B970 /* DoubleFieldCollectionViewCell.swift in Sources */,
 				29DADF73244E15160060628F /* APIRequestProtocol.swift in Sources */,
 				29DADF48244E0C130060628F /* DropdownModel.swift in Sources */,
 				5CAE602E243E166F00E4744E /* StringConstants.swift in Sources */,

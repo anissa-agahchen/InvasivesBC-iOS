@@ -9,12 +9,13 @@
 import XCTest
 @testable import InvasivesBC
 
-class TestClass: BaseObject {
-    @objc dynamic var testProp: String = ""
-    @objc dynamic var testDouble: Double = 5.0
-    @objc dynamic var base: BaseObject = BaseObject()
-}
 
 class InvasivesBCTests: XCTestCase {
-
+    func testStringExtension() {
+        let testString = "helloWorld"
+        let snake = testString.snakeCased()
+        XCTAssert(snake == "hello_world")
+        let sentence = testString.camelCaseToSentence()
+        XCTAssert(sentence == "Hello World")
+    }
 }

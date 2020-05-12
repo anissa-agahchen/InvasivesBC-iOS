@@ -19,6 +19,10 @@ extension FieldConfig {
             return .switch
         case .TextArea:
             return .textArea
+        case .Int:
+            return .int
+        case .Double:
+            return .double
         default:
             return .text
         }
@@ -59,6 +63,8 @@ class  FieldGroup: UIView {
         case textArea = "TextAreaFieldCollectionViewCell"
         case `switch` = "SwitchFieldCollectionViewCell"
         case date = "DateFieldCollectionViewCell"
+        case int = "IntegerFieldCollectionViewCell"
+        case double = "DoubleFieldCollectionViewCell"
     }
     
     // MARK: Presenter
@@ -130,7 +136,7 @@ class  FieldGroup: UIView {
             // increase width counter
             widthCounter = widthCounter + itemWidth
             
-            // if its the last item, add rowheight
+            // if its the last item, add row-height
             if index == (fields.count - 1) {
                 rowHeights.append(tempMaxRowItemHeight)
             }
@@ -154,7 +160,7 @@ class  FieldGroup: UIView {
 // MARK: FieldGroup - View Update Functions
 extension FieldGroup {
     // MARK: Private Function
-    // Adding autolayout constraints respect of container view
+    // Adding auto-layout constraints respect of container view
     private func addConstraints(for view: UIView) {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
@@ -163,8 +169,8 @@ extension FieldGroup {
         self.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
     
-    // Adding autolayout constraints to collection view
-    private func addCollectionVIewConstraints() {
+    // Adding auto-layout constraints to collection view
+    private func addCollectionViewConstraints() {
        guard let collection = self.collectionView else {return}
        collection.translatesAutoresizingMaskIntoConstraints = false
        collection.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
@@ -191,7 +197,7 @@ extension FieldGroup {
         self.addSubview(collection)
         
         // Adding constraint
-        addCollectionVIewConstraints()
+        addCollectionViewConstraints()
         
         // Setting DataSource and Delegate For CollectionView
         collection.dataSource = self
