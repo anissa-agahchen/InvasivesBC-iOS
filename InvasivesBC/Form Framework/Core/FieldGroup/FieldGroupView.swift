@@ -97,56 +97,7 @@ class  FieldGroupView: UIView {
     
     // Calculate estimated content height
     public static func estimateContentHeight(for fields: [FieldConfig]) -> CGFloat {
-        let assumedCellSpacing: CGFloat = 10
-        var rowHeights: [CGFloat] = []
-        var widthCounter: CGFloat = 0
-        var tempMaxRowItemHeight: CGFloat = 0
-        for (index, item) in fields.enumerated()  {
-            
-            var itemWidth: CGFloat = 0
-            // Get Width in terms of screen %
-            switch item.width {
-            case .Full:
-                itemWidth = 100
-            case .Half:
-                itemWidth = 50
-            case .Third:
-                itemWidth = 33
-            case .Forth:
-                itemWidth = 25
-            case .Fill:
-                itemWidth = 100 - widthCounter
-            }
-            // If the new row width + current row width exceeds 100, item will be in the next row
-            if (widthCounter + itemWidth) > 100 {
-                // Store previous row's max height
-                rowHeights.append(tempMaxRowItemHeight + assumedCellSpacing)
-                tempMaxRowItemHeight = 0
-                widthCounter = 0
-            }
-            
-            // TODO: handle height for items with dependency where dependency is not satisfied
-           
-            
-            // If current item's height is greater than the max item height for row
-            // set max item hight for row
-            if tempMaxRowItemHeight < item.height {
-                tempMaxRowItemHeight = item.height
-            }
-            // increase width counter
-            widthCounter = widthCounter + itemWidth
-            
-            // if its the last item, add row-height
-            if index == (fields.count - 1) {
-                rowHeights.append(tempMaxRowItemHeight)
-            }
-        }
-        
-        var computedHeight: CGFloat = 0
-        for rowHeight in rowHeights {
-            computedHeight = computedHeight + rowHeight
-        }
-        return computedHeight
+        return VoidField.estimateContentHeight(for: fields)
     }
     
     

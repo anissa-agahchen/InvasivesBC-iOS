@@ -13,7 +13,18 @@ private let reuseIdentifier = "Cell"
 
 // MARK: FormGroupCellType
 /// Collection of different FormGroup Cell type
-class FormGroupCellType: NSString, CaseIterable {
+class FormGroupCellType: CaseIterable, ExpressibleByStringLiteral, Equatable, RawRepresentable {
+    
+    /// RawValue
+    typealias RawValue = String
+    
+    
+    /// String Type Alias
+    public typealias StringLiteralType = String
+    
+    /// Raw Value
+    fileprivate var _internalValue: String = "";
+    
     /// Basic Cell Types
     static let BasicFormGroupCell: FormGroupCellType = "FormGroupCollectionViewCell"
     
@@ -32,6 +43,33 @@ class FormGroupCellType: NSString, CaseIterable {
         }
         return allCells
     }
+    
+    // MARK: Constructor
+    /// General construction
+    init(_ value: String) {
+        self._internalValue = value
+    }
+    
+    /// ExpressibleByStringLiteral
+    required init(stringLiteral value: StringLiteralType) {
+        self._internalValue = value
+    }
+    
+    /// RawRepresentable
+    required init?(rawValue: String) {
+        self._internalValue = rawValue
+    }
+    
+    // MARK: Operator
+    public static func == (lhs: FormGroupCellType, rhs: FormGroupCellType) -> Bool {
+        return lhs._internalValue == rhs._internalValue
+    }
+    
+    // MARK: Getter
+    var rawValue: String {
+        return self._internalValue
+    }
+    
 }
 
 // MARK: Extension UICollectionView
@@ -40,24 +78,42 @@ extension UICollectionView {
     
     /// Returning FormGroup Cell type
     func dequeueReusableFormGroupCell(withType type: FormGroupCellType, for indexPath: IndexPath) -> UICollectionViewCell {
-        return self.dequeueReusableCell(withReuseIdentifier: type as String, for: indexPath)
+        return self.dequeueReusableCell(withReuseIdentifier: type.rawValue, for: indexPath)
     }
     
     /// Register FormGroupCellType nib with Nib name as Identifier
     func register(formGroupCell: FormGroupCellType) {
-        let nib = UINib(nibName: formGroupCell as String, bundle: nil)
-        self.register(nib, forCellWithReuseIdentifier: formGroupCell as String)
+        let nib = UINib(nibName: formGroupCell.rawValue, bundle: nil)
+        self.register(nib, forCellWithReuseIdentifier: formGroupCell.rawValue)
     }
 }
 
 /// CollectionView to display Form for Connected Model and ViewModel
-class FormCollectionViewController<Model: BaseObject, CellType: FormGroupCellType>: UICollectionViewController {
+class FormCollectionViewController<Model: BaseObject, CellType: FormGroupCellType, ViewModel: FormModel<Model>>: UICollectionViewController, UICollectionViewDelegateFlowLayout {
    
-    // MARK: ViewModel
-    typealias ViewModel = FormModel<Model>
+    
+    // MARK: UICollectionViewDelegateFlowLayout
     
     /// Property ViewModel
-    var formModel: ViewModel?
+    var formModel: ViewModel? {
+        didSet {
+            self.formModel?.createFields()
+            self.collectionView?.reloadData()
+        }
+    }
+    
+    /// Property Model
+    var data: Model? {
+        didSet {
+            self.formModel?.data = self.data
+            DispatchQueue.main.async {
+                self.collectionView?.reloadData()
+            }
+        }
+    }
+    
+    /// Presenter delegate
+    var auxViewPresenter: FieldAuxViewPresenterDelegate?
     
     
     // MARK: UIViewController
@@ -93,12 +149,23 @@ class FormCollectionViewController<Model: BaseObject, CellType: FormGroupCellTyp
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
+        
+        // Get cell type from data
+        guard let group: FormModel<Model>.FieldGroup = self.formModel?.groups[indexPath.row] else {
+            return collectionView.dequeueReusableFormGroupCell(withType: .BasicFormGroupCell, for: indexPath)
+        }
+        
+        // Get Cell
+        let cell = collectionView.dequeueReusableFormGroupCell(withType: group.cellType, for: indexPath)
+        
+        // Configure Cell
+        if let baseCell: BaseFormGroupCell = cell as? BaseFormGroupCell {
+            baseCell.setup(fields: group.fields, with: group.header, presenter: self.auxViewPresenter)
+        }
     
         return cell
     }
+    
 
     // MARK: UICollectionViewDelegate
 
@@ -130,6 +197,27 @@ class FormCollectionViewController<Model: BaseObject, CellType: FormGroupCellTyp
     
     }
     */
+    
+    // MARK: UICollectionViewDelegateFlowLayout
+    /// Get Size of each form-group
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        guard let group: FormModel<Model>.FieldGroup = self.formModel?.groups[indexPath.row] else {
+            return CGSize.zero
+        }
+        return CGSize(width: self.collectionView!.frame.width, height: group.contentHeight)
+    }
+    
+    // MARK: Clear
+    func clear() {
+        self.formModel?.clear()
+    }
+    
+    // MARK: Destroy
+    deinit {
+        self.clear()
+        DebugLog("\(self)")
+    }
+    
 
 }
 
@@ -143,3 +231,7 @@ extension FormCollectionViewController {
         }
     }
 }
+
+
+
+

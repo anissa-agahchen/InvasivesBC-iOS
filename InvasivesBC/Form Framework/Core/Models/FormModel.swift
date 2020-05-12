@@ -12,6 +12,16 @@ import Foundation
 let AllFieldsGroupHeader = "All Fields"
 let UngroupedFieldsGroupHeader = "Other Fields"
 
+/// MARK: GroupLayoutDataSource
+/// - This is custom data source delegation to get custom layout information of group
+protocol GroupLayoutDataSource {
+    /// Get content height of the group
+    func groupContentHeight(for fields: [Field]) -> CGFloat
+    
+    /// Get FormGroupCell type
+    func customCellType() -> FormGroupCellType
+}
+
 // MARK: Layout
 /// - Layout: Structure to store Form Layout
 struct Layout {
@@ -23,11 +33,14 @@ struct Layout {
         var header: String = ""
         /// Fields with group
         var fields: [FieldInfo] = []
-        /// Custom Group Cell type
-        var customCellType: FormGroupCellType?
+        
+        /// DataSource for Custom Group design
+        var dataSource: GroupLayoutDataSource?
     }
     var groups: [Group] = []
 }
+
+
 
 // MARK: FormModel
 /// --
@@ -35,8 +48,36 @@ struct Layout {
 class FormModel<T: BaseObject>: NSObject {
     
     struct FieldGroup {
+        /// Header text
         var header: String = ""
+        
+        /// Field data to represent
         var fields: [Field] = []
+        
+        /// DataSource for CustomGroupDevelopment
+        var dataSource: GroupLayoutDataSource?
+        
+        /// Cell type to display
+        var cellType: FormGroupCellType {
+            if let layoutDataSource = self.dataSource {
+                // CellType as per data source
+                return layoutDataSource.customCellType()
+            } else {
+                // General Cell Type
+                return .BasicFormGroupCell
+            }
+        }
+        
+        /// Content width
+        var contentHeight: CGFloat {
+            if let layoutDataSource = self.dataSource {
+                // Custom content height as per data source
+                return layoutDataSource.groupContentHeight(for: self.fields)
+            } else {
+                // Generic content height based on fields
+                return VoidField.estimateContentHeight(for: self.fields)
+            }
+        }
     }
     
     /// Data Model
@@ -164,15 +205,23 @@ extension FormModel {
         // Creating groups structure
         var result: [FieldGroup] = []
         var handledField: [String : Bool] = [:]
+        
         for group in self.layout.groups {
             var fieldGroup = FieldGroup()
+            // Header
             fieldGroup.header = group.header
+            // Creating Fields
             for fieldInfo in group.fields {
                 guard let field: Field = self.fieldsMap[fieldInfo.fieldName] else { continue }
                 field.width = fieldInfo.fieldWidth
                 fieldGroup.fields.append(field)
                 handledField[fieldInfo.fieldName] = true
             }
+            
+            // Datasource
+            fieldGroup.dataSource = group.dataSource
+            
+            // Adding group to form
             result.append(fieldGroup)
         }
         
