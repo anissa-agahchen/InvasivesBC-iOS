@@ -60,7 +60,11 @@ class FormModelTests: XCTestCase {
         // Check Other groups
         let group2: FormModel.FieldGroup = groups[1]
         XCTAssert(group2.header == UngroupedFieldsGroupHeader)
-        XCTAssert(group2.fields.count == User.propertyList().count - 3)
+        XCTAssert(group2.fields.count == User.propertyList().count - 7)
+        
+        // Check ignored props
+        let ignoredField: Field? = vm[SelectorStr(#selector(getter: BaseObject.localId))]
+        XCTAssertNil(ignoredField)
         
     }
     
@@ -94,6 +98,15 @@ class FormModelTests: XCTestCase {
         field?.fieldValue = testFirstName2
         XCTAssert(user.firstName != testFirstName2)
         
+    }
+    
+    func testIgnoredProperties() {
+        let ignoredPropList = UserTestViewModel.ignoredProperties()
+        XCTAssert(ignoredPropList.count == 4)
+        XCTAssert(ignoredPropList.contains("localId"))
+        XCTAssert(ignoredPropList.contains("remoteId"))
+        XCTAssert(ignoredPropList.contains("displayLabel"))
+        XCTAssert(ignoredPropList.contains("sync"))
     }
 
     /*func testPerformanceExample() throws {

@@ -316,3 +316,9 @@ class SpacerFieldViewModel: FieldViewModel<Void> {
         return .Spacer
     }
 }
+
+
+// DropDown Model
+class DropDownViewModel: FieldViewModel<Int> {
+    
+}

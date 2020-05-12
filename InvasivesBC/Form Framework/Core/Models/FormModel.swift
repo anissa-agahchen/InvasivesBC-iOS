@@ -117,6 +117,19 @@ class FormModel<T: BaseObject>: NSObject {
     }
     
     /// --
+    /// This method will return a list of property name which is ignored due to form creation.
+    /// Subclass can override
+    /// @returns [String]
+    class func ignoredProperties() -> [String] {
+        return [
+            SelectorStr(#selector(getter: BaseObject.localId)),
+            SelectorStr(#selector(getter: BaseObject.remoteId)),
+            SelectorStr(#selector(getter: BaseObject.displayLabel)),
+            SelectorStr(#selector(getter: BaseObject.sync))
+        ]
+    }
+    
+    /// --
     /// Custom header for Model Property name. Subclass  should override.
     /// @param propertyName: String =>  Name of the model property
     /// @returns String
@@ -134,17 +147,22 @@ class FormModel<T: BaseObject>: NSObject {
         // Creating Fields
         let propertyList = T.propertyList()
         for prop in propertyList {
+            // Check field is ignored or not
+            if Self.ignoredProperties().contains(prop.name) {
+                continue
+            }
+            // Value Handling
             let value: Any? = self.data?.value(forKey: prop.name)
-           // Get Field From config
-           if let field: Field = Self.fieldForModel(property: prop, editable: self.editable) {
-               field.fieldValue = value
-               self.fieldsMap[prop.name] = field
-           } else {
-               // Create Default field
-               let defaultField = self.defaultField(propertyDescriptor: prop)
-               defaultField.fieldValue = value
-               self.fieldsMap[prop.name] = defaultField
-           }
+            // Get Field From config
+            if let field: Field = Self.fieldForModel(property: prop, editable: self.editable) {
+                field.fieldValue = value
+                self.fieldsMap[prop.name] = field
+            } else {
+                // Create Default field
+                let defaultField = self.defaultField(propertyDescriptor: prop)
+                defaultField.fieldValue = value
+                self.fieldsMap[prop.name] = defaultField
+            }
         }
         
         // Applying layout
