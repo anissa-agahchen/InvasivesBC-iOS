@@ -150,6 +150,7 @@
 		5CF814332469F82E00A644DB /* Forms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CF814322469F82E00A644DB /* Forms.storyboard */; };
 		5CF814362469F87500A644DB /* UserFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF814352469F87500A644DB /* UserFormViewController.swift */; };
 		5CF814382469F8B400A644DB /* UserFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF814372469F8B400A644DB /* UserFormViewModel.swift */; };
+		5CF8143A246B469300A644DB /* CodeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF81439246B469300A644DB /* CodeTable.swift */; };
 		D7658CBF16D2EBA8CA95964B /* Pods_InvasivesBC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4C207FA6A9E731E1565C66 /* Pods_InvasivesBC.framework */; };
 /* End PBXBuildFile section */
 
@@ -317,6 +318,7 @@
 		5CF814322469F82E00A644DB /* Forms.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Forms.storyboard; sourceTree = "<group>"; };
 		5CF814352469F87500A644DB /* UserFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormViewController.swift; sourceTree = "<group>"; };
 		5CF814372469F8B400A644DB /* UserFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormViewModel.swift; sourceTree = "<group>"; };
+		5CF81439246B469300A644DB /* CodeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTable.swift; sourceTree = "<group>"; };
 		D7FBA663E9B29797DC3DFE8D /* Pods-InvasivesBCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvasivesBCTests.release.xcconfig"; path = "Target Support Files/Pods-InvasivesBCTests/Pods-InvasivesBCTests.release.xcconfig"; sourceTree = "<group>"; };
 		F82DAD2914D8DA07F6141680 /* Pods-InvasivesBC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvasivesBC.debug.xcconfig"; path = "Target Support Files/Pods-InvasivesBC/Pods-InvasivesBC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -879,6 +881,7 @@
 			children = (
 				5CA6E05924474F8900774A28 /* BaseObject.swift */,
 				5CA6E06A24475A2400774A28 /* BaseObjectExtension.swift */,
+				5CF81439246B469300A644DB /* CodeTable.swift */,
 			);
 			path = BaseModel;
 			sourceTree = "<group>";
@@ -1269,6 +1272,7 @@
 				5C718452243B896700BF131C /* ApplicationLogger.swift in Sources */,
 				5CAE602B243E14A100E4744E /* Fonts.swift in Sources */,
 				29DADF5B244E0C130060628F /* BannerView.swift in Sources */,
+				5CF8143A246B469300A644DB /* CodeTable.swift in Sources */,
 				29DADF58244E0C130060628F /* PopoverSize.swift in Sources */,
 				5CF814202465CBDF00A644DB /* FormCollectionViewController.swift in Sources */,
 				29B1E5C42446522A00C44C78 /* UTMCoordinate.swift in Sources */,

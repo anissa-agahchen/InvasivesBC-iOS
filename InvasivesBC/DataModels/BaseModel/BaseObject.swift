@@ -49,22 +49,3 @@ class CodeObject: BaseObject {
     // MARK: Remote description
     @objc dynamic var remoteDescription: String = ""
 }
-
-// MARK: Code Table
-class CodeTable: Object {
-    // MARK: LocalId: Unique value
-    @objc dynamic var localId: String = {
-        return UUID().uuidString
-    }()
-    
-    // MARK: Primary key
-    override class func primaryKey() -> String? {
-       return "localId"
-    }
-    
-    // MARK: Type or CodeTable Remote Model Name
-    @objc dynamic var type: String = ""
-    
-    // MARK: List of Values
-    var codes: List<CodeObject> = List<CodeObject>()
-}
