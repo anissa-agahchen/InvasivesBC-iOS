@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import Reachability
 import SwiftyJSON
 
 class APIService: APIRequest {
@@ -20,6 +21,18 @@ class APIService: APIRequest {
     }
     
     static func get(endpoint: URL, completion: @escaping (Any?) -> Void) {
+        // Reachability
+        do {
+            let reacahbility = try Reachability()
+            if (reacahbility.connection == .unavailable) {
+                Banner.show(message: "No Connection")
+                return completion(nil)
+            }
+        } catch  let error as NSError {
+            print("** Reachability ERROR")
+            print(error)
+            return completion(nil)
+        }
         // Manual 20 second timeout for each call
         var completed = false
         var timedOut = false
@@ -59,6 +72,18 @@ class APIService: APIRequest {
     }
     
     static func post(endpoint: URL, params: [String : Any], completion: @escaping (Any?) -> Void) {
+        // Reachability
+        do {
+            let reacahbility = try Reachability()
+            if (reacahbility.connection == .unavailable) {
+                Banner.show(message: "No Connection")
+                return completion(nil)
+            }
+        } catch  let error as NSError {
+            print("** Reachability ERROR")
+            print(error)
+            return completion(nil)
+        }
         // Manual 20 second timeout for each call
         var completed = false
         var timedOut = false

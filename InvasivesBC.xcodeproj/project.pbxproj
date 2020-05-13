@@ -16,7 +16,6 @@
 		2944BD192437DD7500826F48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2944BD172437DD7500826F48 /* LaunchScreen.storyboard */; };
 		2944BD242437DD7500826F48 /* InvasivesBCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2944BD232437DD7500826F48 /* InvasivesBCTests.swift */; };
 		2974C97F2469A39D00B404D8 /* CodeTableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2974C97E2469A39D00B404D8 /* CodeTableService.swift */; };
-		2974C9822469A74E00B404D8 /* CodeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2974C9812469A74E00B404D8 /* CodeTable.swift */; };
 		29B1E5C22446522A00C44C78 /* LocationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B1E5B82446522A00C44C78 /* LocationServices.swift */; };
 		29B1E5C32446522A00C44C78 /* AlbersCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B1E5BA2446522A00C44C78 /* AlbersCoordinate.swift */; };
 		29B1E5C42446522A00C44C78 /* UTMCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B1E5BB2446522A00C44C78 /* UTMCoordinate.swift */; };
@@ -179,7 +178,6 @@
 		2944BD232437DD7500826F48 /* InvasivesBCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvasivesBCTests.swift; sourceTree = "<group>"; };
 		2944BD252437DD7500826F48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2974C97E2469A39D00B404D8 /* CodeTableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTableService.swift; sourceTree = "<group>"; };
-		2974C9812469A74E00B404D8 /* CodeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTable.swift; sourceTree = "<group>"; };
 		29B1E5B82446522A00C44C78 /* LocationServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationServices.swift; sourceTree = "<group>"; };
 		29B1E5BA2446522A00C44C78 /* AlbersCoordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbersCoordinate.swift; sourceTree = "<group>"; };
 		29B1E5BB2446522A00C44C78 /* UTMCoordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTMCoordinate.swift; sourceTree = "<group>"; };
@@ -414,14 +412,6 @@
 				5CF8142D2469E4C700A644DB /* FormCollectionViewTests.swift */,
 			);
 			path = InvasivesBCTests;
-			sourceTree = "<group>";
-		};
-		2974C9802469A74300B404D8 /* CodeTables */ = {
-			isa = PBXGroup;
-			children = (
-				2974C9812469A74E00B404D8 /* CodeTable.swift */,
-			);
-			path = CodeTables;
 			sourceTree = "<group>";
 		};
 		29B1E5B72446522A00C44C78 /* LocationServices */ = {
@@ -883,7 +873,6 @@
 		5CA6E05724474ED200774A28 /* DataModels */ = {
 			isa = PBXGroup;
 			children = (
-				2974C9802469A74300B404D8 /* CodeTables */,
 				5CA6E06D24475DB500774A28 /* Account */,
 				5CA6E05824474F1000774A28 /* BaseModel */,
 			);
@@ -1271,7 +1260,6 @@
 				29DADFA5244F84F10060628F /* UserModel.swift in Sources */,
 				29DADF56244E0C130060628F /* OptionsTableViewCell.swift in Sources */,
 				29B1E5C52446522A00C44C78 /* HexLocation.swift in Sources */,
-				2974C9822469A74E00B404D8 /* CodeTable.swift in Sources */,
 				29DADF51244E0C130060628F /* TableViewModel.swift in Sources */,
 				5CAE603B243E2E4F00E4744E /* TextFieldCollectionViewCell.swift in Sources */,
 				29DADF64244E0C130060628F /* SwitcherCollectionViewCell.swift in Sources */,
@@ -1513,6 +1501,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = L796QSLV3E;
 				INFOPLIST_FILE = InvasivesBC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1535,6 +1524,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = L796QSLV3E;
 				INFOPLIST_FILE = InvasivesBC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

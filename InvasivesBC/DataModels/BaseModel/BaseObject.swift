@@ -48,4 +48,5 @@ class BaseObject: Object {
 class CodeObject: BaseObject {
     // MARK: Remote description
     @objc dynamic var remoteDescription: String = ""
+    @objc dynamic var primaryKeyName: String = ""
 }

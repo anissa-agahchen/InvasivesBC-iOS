@@ -20,8 +20,8 @@ extension RootViewController {
     /// Determines  if login or home page should be presented
     internal func presentNext() {
         self.containerView.isHidden = true
-        showHomePage()
-        return
+//        showHomePage()
+//        return
         if (!isAuthenticated()) {
             segueToLoginPage()
             return
