@@ -20,8 +20,9 @@ extension RootViewController {
     /// Determines  if login or home page should be presented
     internal func presentNext() {
         self.containerView.isHidden = true
-//        showHomePage()
-//        return
+        showHomePage()
+        return
+        // TODO: delete the 2 lines above when dev work on forms begins (to test login while developing)
         if (!isAuthenticated()) {
             segueToLoginPage()
             return

@@ -31,11 +31,6 @@ class LandingPageViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.setNavigationBar(hidden: true, style: .default)
-        CodeTableService.shared.download(completion: { (done) in
-            print(done)
-        }) { (status) in
-            print(status)
-        }
     }
 
     
