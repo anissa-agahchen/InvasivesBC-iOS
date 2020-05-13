@@ -80,6 +80,7 @@ enum EndPoints: String {
     case none = ""
     case accessRequest = "/request-access"
     case user = "/account/me"
+    case codeTables = "/codes"
 }
 
 /**
@@ -93,6 +94,10 @@ struct APIURL {
     
     static let assessRequest: String = {
         return Self.baseURL + EndPoints.accessRequest.rawValue
+    }()
+    
+    static let codeTables: String = {
+        return Self.baseURL + EndPoints.codeTables.rawValue
     }()
 }
 

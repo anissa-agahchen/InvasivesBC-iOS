@@ -15,6 +15,8 @@
 		2944BD162437DD7500826F48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2944BD152437DD7500826F48 /* Assets.xcassets */; };
 		2944BD192437DD7500826F48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2944BD172437DD7500826F48 /* LaunchScreen.storyboard */; };
 		2944BD242437DD7500826F48 /* InvasivesBCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2944BD232437DD7500826F48 /* InvasivesBCTests.swift */; };
+		2974C97F2469A39D00B404D8 /* CodeTableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2974C97E2469A39D00B404D8 /* CodeTableService.swift */; };
+		2974C9822469A74E00B404D8 /* CodeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2974C9812469A74E00B404D8 /* CodeTable.swift */; };
 		29B1E5C22446522A00C44C78 /* LocationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B1E5B82446522A00C44C78 /* LocationServices.swift */; };
 		29B1E5C32446522A00C44C78 /* AlbersCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B1E5BA2446522A00C44C78 /* AlbersCoordinate.swift */; };
 		29B1E5C42446522A00C44C78 /* UTMCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B1E5BB2446522A00C44C78 /* UTMCoordinate.swift */; };
@@ -159,6 +161,8 @@
 		2944BD1F2437DD7500826F48 /* InvasivesBCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InvasivesBCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2944BD232437DD7500826F48 /* InvasivesBCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvasivesBCTests.swift; sourceTree = "<group>"; };
 		2944BD252437DD7500826F48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2974C97E2469A39D00B404D8 /* CodeTableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTableService.swift; sourceTree = "<group>"; };
+		2974C9812469A74E00B404D8 /* CodeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTable.swift; sourceTree = "<group>"; };
 		29B1E5B82446522A00C44C78 /* LocationServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationServices.swift; sourceTree = "<group>"; };
 		29B1E5BA2446522A00C44C78 /* AlbersCoordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbersCoordinate.swift; sourceTree = "<group>"; };
 		29B1E5BB2446522A00C44C78 /* UTMCoordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTMCoordinate.swift; sourceTree = "<group>"; };
@@ -374,6 +378,14 @@
 				5CA5E56F24534BA100280124 /* EntryOptionViewControllerTests.swift */,
 			);
 			path = InvasivesBCTests;
+			sourceTree = "<group>";
+		};
+		2974C9802469A74300B404D8 /* CodeTables */ = {
+			isa = PBXGroup;
+			children = (
+				2974C9812469A74E00B404D8 /* CodeTable.swift */,
+			);
+			path = CodeTables;
 			sourceTree = "<group>";
 		};
 		29B1E5B72446522A00C44C78 /* LocationServices */ = {
@@ -618,6 +630,7 @@
 				29DADF8D244E3D410060628F /* App Settings */,
 				29DADF71244E15000060628F /* API */,
 				29DADF87244E20580060628F /* Authentication */,
+				2974C97E2469A39D00B404D8 /* CodeTableService.swift */,
 			);
 			name = Services;
 			path = Constants/Services;
@@ -827,6 +840,7 @@
 		5CA6E05724474ED200774A28 /* DataModels */ = {
 			isa = PBXGroup;
 			children = (
+				2974C9802469A74300B404D8 /* CodeTables */,
 				5CA6E06D24475DB500774A28 /* Account */,
 				5CA6E05824474F1000774A28 /* BaseModel */,
 			);
@@ -1130,6 +1144,7 @@
 				29DADF5A244E0C130060628F /* OptionType.swift in Sources */,
 				29DADF93244E3D870060628F /* SettingsModel.swift in Sources */,
 				2944BD112437DD7200826F48 /* RootViewController.swift in Sources */,
+				2974C97F2469A39D00B404D8 /* CodeTableService.swift in Sources */,
 				29DADF4F244E0C130060628F /* Table.swift in Sources */,
 				5C64708C243CC52F0013720E /* DynamicValue.swift in Sources */,
 				5CAE6030243E16DB00E4744E /* SettingsConstants.swift in Sources */,
@@ -1142,6 +1157,7 @@
 				29DADFA5244F84F10060628F /* UserModel.swift in Sources */,
 				29DADF56244E0C130060628F /* OptionsTableViewCell.swift in Sources */,
 				29B1E5C52446522A00C44C78 /* HexLocation.swift in Sources */,
+				2974C9822469A74E00B404D8 /* CodeTable.swift in Sources */,
 				29DADF51244E0C130060628F /* TableViewModel.swift in Sources */,
 				5CAE603B243E2E4F00E4744E /* TextFieldCollectionViewCell.swift in Sources */,
 				29DADF64244E0C130060628F /* SwitcherCollectionViewCell.swift in Sources */,
