@@ -49,6 +49,8 @@ enum AppStoryBoard: String {
     case main = "Main"
     // Landing Page
     case landingPage = "LandingPage"
+    // Forms
+    case forms = "Forms"
 }
 
 // MARK: StoryBoardIdentifier
@@ -56,6 +58,7 @@ enum AppStoryBoard: String {
 enum StoryBoardIdentifier: String {
     case rootController
     case entryOptionController
+    case userFormController
 }
 
 // MARK: Model File Name

@@ -13,7 +13,7 @@ import UIKit
 extension UICollectionView {
     
     // Generic method to obtain FieldCell
-    func dequeueReusableFieldCell(type: FieldGroup.FieldCellType, for index: IndexPath) -> FieldCell {
+    func dequeueReusableFieldCell(type: FieldGroupView.FieldCellType, for index: IndexPath) -> FieldCell {
         return self.dequeueReusableCell(withFieldType: type, for: index) as! FieldCell
     }
     
@@ -23,8 +23,8 @@ extension UICollectionView {
     }
 }
 
-// CollectionView related extension of FielGroup View
-extension FieldGroup: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+// CollectionView related extension of FieldGroup View
+extension FieldGroupView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     // MARK: UICollectionViewDataSource
     // No of Item in section
@@ -36,7 +36,7 @@ extension FieldGroup: UICollectionViewDataSource, UICollectionViewDelegate, UICo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let config = fields[indexPath.row]
         let cell = collectionView.dequeueReusableFieldCell(type: config.fieldCellType, for: indexPath)
-        cell.initialize(model: config, presenter: self.preseneter)
+        cell.initialize(model: config, presenter: self.presenter)
        return cell
     }
     

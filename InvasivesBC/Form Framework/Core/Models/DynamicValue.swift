@@ -8,7 +8,7 @@
 
 import Foundation
 
-// Dymamic Value Class holds generic dynamic value and notfify observer if values change
+// Dynamic Value Class holds generic dynamic value and notify observer if values change
 class DynamicValue<T> {
     
     // Type: Closure Action to notify

@@ -9,19 +9,13 @@
 import XCTest
 @testable import InvasivesBC
 
+
 class InvasivesBCTests: XCTestCase {
-
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testStringExtension() {
+        let testString = "helloWorld"
+        let snake = testString.snakeCased()
+        XCTAssert(snake == "hello_world")
+        let sentence = testString.camelCaseToSentence()
+        XCTAssert(sentence == "Hello World")
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }

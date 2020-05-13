@@ -124,7 +124,7 @@
 		5CAE602C243E14A100E4744E /* GradiantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE6028243E14A100E4744E /* GradiantView.swift */; };
 		5CAE602E243E166F00E4744E /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE602D243E166F00E4744E /* StringConstants.swift */; };
 		5CAE6030243E16DB00E4744E /* SettingsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE602F243E16DB00E4744E /* SettingsConstants.swift */; };
-		5CAE6033243E182B00E4744E /* FieldGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE6032243E182B00E4744E /* FieldGroup.swift */; };
+		5CAE6033243E182B00E4744E /* FieldGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE6032243E182B00E4744E /* FieldGroupView.swift */; };
 		5CAE6035243E2D2B00E4744E /* FieldGroup+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE6034243E2D2B00E4744E /* FieldGroup+CollectionView.swift */; };
 		5CAE603A243E2E4F00E4744E /* TextFieldCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CAE6038243E2E4F00E4744E /* TextFieldCollectionViewCell.xib */; };
 		5CAE603B243E2E4F00E4744E /* TextFieldCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE6039243E2E4F00E4744E /* TextFieldCollectionViewCell.swift */; };
@@ -136,6 +136,23 @@
 		5CAE604D243E6E6500E4744E /* DateFieldCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CAE604B243E6E6500E4744E /* DateFieldCollectionViewCell.xib */; };
 		5CAE604E243E6E6500E4744E /* DateFieldCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE604C243E6E6500E4744E /* DateFieldCollectionViewCell.swift */; };
 		5CAE6050243F8D9800E4744E /* FieldGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAE604F243F8D9800E4744E /* FieldGroupTests.swift */; };
+		5CE030A624635E1F00C6B970 /* FormModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE030A524635E1F00C6B970 /* FormModelTests.swift */; };
+		5CE030A824635E4000C6B970 /* NSObjectPropertyListExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE030A724635E4000C6B970 /* NSObjectPropertyListExtension.swift */; };
+		5CE030AA246365BA00C6B970 /* FormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE030A9246365BA00C6B970 /* FormModel.swift */; };
+		5CE030AE2464428500C6B970 /* DoubleFieldCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE030AC2464428500C6B970 /* DoubleFieldCollectionViewCell.xib */; };
+		5CE030AF2464428500C6B970 /* DoubleFieldCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE030AD2464428500C6B970 /* DoubleFieldCollectionViewCell.swift */; };
+		5CE030B3246451BA00C6B970 /* IntegerFieldCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE030B1246451BA00C6B970 /* IntegerFieldCollectionViewCell.swift */; };
+		5CE030B4246451BA00C6B970 /* IntegerFieldCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CE030B2246451BA00C6B970 /* IntegerFieldCollectionViewCell.xib */; };
+		5CF814202465CBDF00A644DB /* FormCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8141F2465CBDF00A644DB /* FormCollectionViewController.swift */; };
+		5CF814242466003B00A644DB /* FormGroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF814222466003B00A644DB /* FormGroupCollectionViewCell.swift */; };
+		5CF814252466003B00A644DB /* FormGroupCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF814232466003B00A644DB /* FormGroupCollectionViewCell.xib */; };
+		5CF81427246609B600A644DB /* BaseFormGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF81426246609B600A644DB /* BaseFormGroupCell.swift */; };
+		5CF8142C2469DB3300A644DB /* UIKitExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8142B2469DB3300A644DB /* UIKitExtensions.m */; };
+		5CF8142E2469E4C700A644DB /* FormCollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8142D2469E4C700A644DB /* FormCollectionViewTests.swift */; };
+		5CF814332469F82E00A644DB /* Forms.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CF814322469F82E00A644DB /* Forms.storyboard */; };
+		5CF814362469F87500A644DB /* UserFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF814352469F87500A644DB /* UserFormViewController.swift */; };
+		5CF814382469F8B400A644DB /* UserFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF814372469F8B400A644DB /* UserFormViewModel.swift */; };
+		5CF8143A246B469300A644DB /* CodeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF81439246B469300A644DB /* CodeTable.swift */; };
 		D7658CBF16D2EBA8CA95964B /* Pods_InvasivesBC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4C207FA6A9E731E1565C66 /* Pods_InvasivesBC.framework */; };
 /* End PBXBuildFile section */
 
@@ -175,7 +192,6 @@
 		29B1E5D02447811500C44C78 /* HexRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexRule.swift; sourceTree = "<group>"; };
 		29BA887C2460628300EFA137 /* PointPicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PointPicker.storyboard; sourceTree = "<group>"; };
 		29BA887E246062A000EFA137 /* PointPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointPickerViewController.swift; sourceTree = "<group>"; };
-		29DADEF6244E0A3A0060628F /* FoundationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtension.swift; sourceTree = "<group>"; };
 		29DADEF7244E0A3A0060628F /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		29DADEF8244E0A3A0060628F /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		29DADEFA244E0A3A0060628F /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
@@ -277,7 +293,7 @@
 		5CAE6028243E14A100E4744E /* GradiantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradiantView.swift; sourceTree = "<group>"; };
 		5CAE602D243E166F00E4744E /* StringConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		5CAE602F243E16DB00E4744E /* SettingsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsConstants.swift; sourceTree = "<group>"; };
-		5CAE6032243E182B00E4744E /* FieldGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldGroup.swift; sourceTree = "<group>"; };
+		5CAE6032243E182B00E4744E /* FieldGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldGroupView.swift; sourceTree = "<group>"; };
 		5CAE6034243E2D2B00E4744E /* FieldGroup+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FieldGroup+CollectionView.swift"; sourceTree = "<group>"; };
 		5CAE6038243E2E4F00E4744E /* TextFieldCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldCollectionViewCell.xib; sourceTree = "<group>"; };
 		5CAE6039243E2E4F00E4744E /* TextFieldCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -289,6 +305,24 @@
 		5CAE604B243E6E6500E4744E /* DateFieldCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateFieldCollectionViewCell.xib; sourceTree = "<group>"; };
 		5CAE604C243E6E6500E4744E /* DateFieldCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFieldCollectionViewCell.swift; sourceTree = "<group>"; };
 		5CAE604F243F8D9800E4744E /* FieldGroupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldGroupTests.swift; sourceTree = "<group>"; };
+		5CE030A524635E1F00C6B970 /* FormModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModelTests.swift; sourceTree = "<group>"; };
+		5CE030A724635E4000C6B970 /* NSObjectPropertyListExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectPropertyListExtension.swift; sourceTree = "<group>"; };
+		5CE030A9246365BA00C6B970 /* FormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModel.swift; sourceTree = "<group>"; };
+		5CE030AC2464428500C6B970 /* DoubleFieldCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoubleFieldCollectionViewCell.xib; sourceTree = "<group>"; };
+		5CE030AD2464428500C6B970 /* DoubleFieldCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleFieldCollectionViewCell.swift; sourceTree = "<group>"; };
+		5CE030B1246451BA00C6B970 /* IntegerFieldCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegerFieldCollectionViewCell.swift; sourceTree = "<group>"; };
+		5CE030B2246451BA00C6B970 /* IntegerFieldCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntegerFieldCollectionViewCell.xib; sourceTree = "<group>"; };
+		5CF8141F2465CBDF00A644DB /* FormCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCollectionViewController.swift; sourceTree = "<group>"; };
+		5CF814222466003B00A644DB /* FormGroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormGroupCollectionViewCell.swift; sourceTree = "<group>"; };
+		5CF814232466003B00A644DB /* FormGroupCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormGroupCollectionViewCell.xib; sourceTree = "<group>"; };
+		5CF81426246609B600A644DB /* BaseFormGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFormGroupCell.swift; sourceTree = "<group>"; };
+		5CF8142A2469DB3300A644DB /* UIKitExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIKitExtensions.h; sourceTree = "<group>"; };
+		5CF8142B2469DB3300A644DB /* UIKitExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIKitExtensions.m; sourceTree = "<group>"; };
+		5CF8142D2469E4C700A644DB /* FormCollectionViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCollectionViewTests.swift; sourceTree = "<group>"; };
+		5CF814322469F82E00A644DB /* Forms.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Forms.storyboard; sourceTree = "<group>"; };
+		5CF814352469F87500A644DB /* UserFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormViewController.swift; sourceTree = "<group>"; };
+		5CF814372469F8B400A644DB /* UserFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormViewModel.swift; sourceTree = "<group>"; };
+		5CF81439246B469300A644DB /* CodeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTable.swift; sourceTree = "<group>"; };
 		D7FBA663E9B29797DC3DFE8D /* Pods-InvasivesBCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvasivesBCTests.release.xcconfig"; path = "Target Support Files/Pods-InvasivesBCTests/Pods-InvasivesBCTests.release.xcconfig"; sourceTree = "<group>"; };
 		F82DAD2914D8DA07F6141680 /* Pods-InvasivesBC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvasivesBC.debug.xcconfig"; path = "Target Support Files/Pods-InvasivesBC/Pods-InvasivesBC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -346,7 +380,7 @@
 		2944BD0B2437DD7200826F48 /* InvasivesBC */ = {
 			isa = PBXGroup;
 			children = (
-				2944BD122437DD7200826F48 /* Main.storyboard */,
+				5CF8142F2469F76000A644DB /* Storyboards */,
 				29DADF65244E14480060628F /* ViewControllers */,
 				29DADEF5244E095E0060628F /* Views */,
 				5CA6E05724474ED200774A28 /* DataModels */,
@@ -376,6 +410,8 @@
 				5CAE604F243F8D9800E4744E /* FieldGroupTests.swift */,
 				5CA6E07224475F2100774A28 /* UserModelTest.swift */,
 				5CA5E56F24534BA100280124 /* EntryOptionViewControllerTests.swift */,
+				5CE030A524635E1F00C6B970 /* FormModelTests.swift */,
+				5CF8142D2469E4C700A644DB /* FormCollectionViewTests.swift */,
 			);
 			path = InvasivesBCTests;
 			sourceTree = "<group>";
@@ -550,6 +586,7 @@
 			isa = PBXGroup;
 			children = (
 				29DADF7B244E173D0060628F /* BaseViewController.swift */,
+				5CF814342469F83800A644DB /* UserForm */,
 				29DADFA6244F9F1E0060628F /* Home */,
 				29DADF8A244E3CDC0060628F /* Login */,
 				5C9066152450B5E600E2A8CA /* LandingPage */,
@@ -725,6 +762,7 @@
 		5C647089243CBF510013720E /* Form Framework */ = {
 			isa = PBXGroup;
 			children = (
+				5CF814212466000C00A644DB /* FormGroupCells */,
 				5CAE6036243E2E1200E4744E /* Shared Cells */,
 				5C64708A243CC50F0013720E /* Core */,
 			);
@@ -734,6 +772,7 @@
 		5C64708A243CC50F0013720E /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5CF8141E2465CBAD00A644DB /* FormViewController */,
 				5CAE6031243E180700E4744E /* FieldGroup */,
 				5C647096243D1EC00013720E /* BaseCell */,
 				5C647095243D1E8E0013720E /* Models */,
@@ -749,6 +788,7 @@
 				5C647091243D0A190013720E /* Time.swift */,
 				5CA312952444A1660005AC75 /* Validator.swift */,
 				5CA312972444C5130005AC75 /* FieldGroupModels.swift */,
+				5CE030A9246365BA00C6B970 /* FormModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -757,6 +797,7 @@
 			isa = PBXGroup;
 			children = (
 				5C647097243D20E70013720E /* BaseFieldCell.swift */,
+				5CF81426246609B600A644DB /* BaseFormGroupCell.swift */,
 			);
 			path = BaseCell;
 			sourceTree = "<group>";
@@ -780,6 +821,8 @@
 		5C718446243B891200BF131C /* ObjC */ = {
 			isa = PBXGroup;
 			children = (
+				5CF8142A2469DB3300A644DB /* UIKitExtensions.h */,
+				5CF8142B2469DB3300A644DB /* UIKitExtensions.m */,
 				5C718449243B892A00BF131C /* UtilityObjC.h */,
 				5C718448243B892A00BF131C /* UtilityObjC.m */,
 				5C718447243B892A00BF131C /* InvasivesBC-Bridging-Header.h */,
@@ -810,11 +853,11 @@
 			isa = PBXGroup;
 			children = (
 				29DADEFA244E0A3A0060628F /* ArrayExtension.swift */,
-				29DADEF6244E0A3A0060628F /* FoundationExtension.swift */,
 				29DADEF7244E0A3A0060628F /* StringExtension.swift */,
 				29DADEF8244E0A3A0060628F /* UIViewControllerExtensions.swift */,
 				5C71844B243B896600BF131C /* FoundationExtension.swift */,
 				5C872D332451F36A00CA89CF /* UIKitExtension.swift */,
+				5CE030A724635E4000C6B970 /* NSObjectPropertyListExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -852,6 +895,7 @@
 			children = (
 				5CA6E05924474F8900774A28 /* BaseObject.swift */,
 				5CA6E06A24475A2400774A28 /* BaseObjectExtension.swift */,
+				5CF81439246B469300A644DB /* CodeTable.swift */,
 			);
 			path = BaseModel;
 			sourceTree = "<group>";
@@ -881,7 +925,7 @@
 		5CAE6031243E180700E4744E /* FieldGroup */ = {
 			isa = PBXGroup;
 			children = (
-				5CAE6032243E182B00E4744E /* FieldGroup.swift */,
+				5CAE6032243E182B00E4744E /* FieldGroupView.swift */,
 				5CAE6034243E2D2B00E4744E /* FieldGroup+CollectionView.swift */,
 			);
 			path = FieldGroup;
@@ -890,6 +934,9 @@
 		5CAE6036243E2E1200E4744E /* Shared Cells */ = {
 			isa = PBXGroup;
 			children = (
+				5CE030B5246455C100C6B970 /* TimeField */,
+				5CE030B02464518500C6B970 /* IntField */,
+				5CE030AB2464428500C6B970 /* DoubleField */,
 				5CAE604A243E6E5300E4744E /* DateField */,
 				5CAE6045243E60C600E4744E /* SwitchField */,
 				5CAE6040243E5E1F00E4744E /* TextAreaField */,
@@ -932,6 +979,66 @@
 				5CAE604B243E6E6500E4744E /* DateFieldCollectionViewCell.xib */,
 			);
 			path = DateField;
+			sourceTree = "<group>";
+		};
+		5CE030AB2464428500C6B970 /* DoubleField */ = {
+			isa = PBXGroup;
+			children = (
+				5CE030AD2464428500C6B970 /* DoubleFieldCollectionViewCell.swift */,
+				5CE030AC2464428500C6B970 /* DoubleFieldCollectionViewCell.xib */,
+			);
+			path = DoubleField;
+			sourceTree = "<group>";
+		};
+		5CE030B02464518500C6B970 /* IntField */ = {
+			isa = PBXGroup;
+			children = (
+				5CE030B1246451BA00C6B970 /* IntegerFieldCollectionViewCell.swift */,
+				5CE030B2246451BA00C6B970 /* IntegerFieldCollectionViewCell.xib */,
+			);
+			path = IntField;
+			sourceTree = "<group>";
+		};
+		5CE030B5246455C100C6B970 /* TimeField */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TimeField;
+			sourceTree = "<group>";
+		};
+		5CF8141E2465CBAD00A644DB /* FormViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5CF8141F2465CBDF00A644DB /* FormCollectionViewController.swift */,
+			);
+			path = FormViewController;
+			sourceTree = "<group>";
+		};
+		5CF814212466000C00A644DB /* FormGroupCells */ = {
+			isa = PBXGroup;
+			children = (
+				5CF814222466003B00A644DB /* FormGroupCollectionViewCell.swift */,
+				5CF814232466003B00A644DB /* FormGroupCollectionViewCell.xib */,
+			);
+			path = FormGroupCells;
+			sourceTree = "<group>";
+		};
+		5CF8142F2469F76000A644DB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2944BD122437DD7200826F48 /* Main.storyboard */,
+				5CF814322469F82E00A644DB /* Forms.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5CF814342469F83800A644DB /* UserForm */ = {
+			isa = PBXGroup;
+			children = (
+				5CF814352469F87500A644DB /* UserFormViewController.swift */,
+				5CF814372469F8B400A644DB /* UserFormViewModel.swift */,
+			);
+			path = UserForm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1028,8 +1135,11 @@
 				29DADF57244E0C130060628F /* OptionsTableViewCell.xib in Resources */,
 				29B1E5C92446522A00C44C78 /* bcHexTest.json in Resources */,
 				29DADF61244E0C130060628F /* SwitcherView.xib in Resources */,
+				5CF814252466003B00A644DB /* FormGroupCollectionViewCell.xib in Resources */,
+				5CF814332469F82E00A644DB /* Forms.storyboard in Resources */,
 				29DADF55244E0C130060628F /* Options.storyboard in Resources */,
 				29DADF44244E0C130060628F /* Dropdown.storyboard in Resources */,
+				5CE030AE2464428500C6B970 /* DoubleFieldCollectionViewCell.xib in Resources */,
 				29DADF62244E0C130060628F /* SwitcherCollectionViewCell.xib in Resources */,
 				29DADF4B244E0C130060628F /* TableEmptyStateTableViewCell.xib in Resources */,
 				2944BD162437DD7500826F48 /* Assets.xcassets in Resources */,
@@ -1042,6 +1152,7 @@
 				29DADF5F244E0C130060628F /* PDFViewer.xib in Resources */,
 				29B1E5C62446522A00C44C78 /* bcAlbersBoundry.json in Resources */,
 				5CAE6049243E67BC00E4744E /* SwitchFieldCollectionViewCell.xib in Resources */,
+				5CE030B4246451BA00C6B970 /* IntegerFieldCollectionViewCell.xib in Resources */,
 				29DADF82244E1E200060628F /* TimePicker.storyboard in Resources */,
 				29DADFA0244F7AD60060628F /* AwaitingAccessResponse.xib in Resources */,
 				29BA887D2460628300EFA137 /* PointPicker.storyboard in Resources */,
@@ -1132,7 +1243,9 @@
 			files = (
 				5C647090243CDB630013720E /* FieldModels.swift in Sources */,
 				29DADF89244E206B0060628F /* APIService.swift in Sources */,
+				5CF8142C2469DB3300A644DB /* UIKitExtensions.m in Sources */,
 				29DADF83244E1E200060628F /* TimePickerViewController.swift in Sources */,
+				5CE030AA246365BA00C6B970 /* FormModel.swift in Sources */,
 				29B1E5D12447811500C44C78 /* HexRule.swift in Sources */,
 				29DADF8C244E3CF30060628F /* LoginViewController.swift in Sources */,
 				29DADF45244E0C130060628F /* Dropdown.swift in Sources */,
@@ -1146,11 +1259,12 @@
 				2944BD112437DD7200826F48 /* RootViewController.swift in Sources */,
 				2974C97F2469A39D00B404D8 /* CodeTableService.swift in Sources */,
 				29DADF4F244E0C130060628F /* Table.swift in Sources */,
+				5CF814382469F8B400A644DB /* UserFormViewModel.swift in Sources */,
 				5C64708C243CC52F0013720E /* DynamicValue.swift in Sources */,
 				5CAE6030243E16DB00E4744E /* SettingsConstants.swift in Sources */,
 				29BA887F246062A000EFA137 /* PointPickerViewController.swift in Sources */,
 				29DADF59244E0C130060628F /* OptionsViewController.swift in Sources */,
-				5CAE6033243E182B00E4744E /* FieldGroup.swift in Sources */,
+				5CAE6033243E182B00E4744E /* FieldGroupView.swift in Sources */,
 				2944BD0D2437DD7200826F48 /* AppDelegate.swift in Sources */,
 				29DADEFD244E0A3A0060628F /* StringExtension.swift in Sources */,
 				29DADF5C244E0C130060628F /* Banner.swift in Sources */,
@@ -1163,6 +1277,7 @@
 				29DADF64244E0C130060628F /* SwitcherCollectionViewCell.swift in Sources */,
 				29DADF46244E0C130060628F /* DropdownViewController.swift in Sources */,
 				5C9066172450B61300E2A8CA /* LandingPageViewController.swift in Sources */,
+				5CE030B3246451BA00C6B970 /* IntegerFieldCollectionViewCell.swift in Sources */,
 				29DADF81244E1E200060628F /* TimePicker.swift in Sources */,
 				29DADF53244E0C130060628F /* Alert.swift in Sources */,
 				29DADF75244E15F50060628F /* AppRemoteAPIConst.swift in Sources */,
@@ -1173,7 +1288,9 @@
 				5C718452243B896700BF131C /* ApplicationLogger.swift in Sources */,
 				5CAE602B243E14A100E4744E /* Fonts.swift in Sources */,
 				29DADF5B244E0C130060628F /* BannerView.swift in Sources */,
+				5CF8143A246B469300A644DB /* CodeTable.swift in Sources */,
 				29DADF58244E0C130060628F /* PopoverSize.swift in Sources */,
+				5CF814202465CBDF00A644DB /* FormCollectionViewController.swift in Sources */,
 				29B1E5C42446522A00C44C78 /* UTMCoordinate.swift in Sources */,
 				5C872D342451F36A00CA89CF /* UIKitExtension.swift in Sources */,
 				29DADF0B244E0B5E0060628F /* JWTDecoder.swift in Sources */,
@@ -1190,6 +1307,7 @@
 				5C872D322450EB6400CA89CF /* EntryOptionViewController.swift in Sources */,
 				29DADF7C244E173D0060628F /* BaseViewController.swift in Sources */,
 				2944BD0F2437DD7200826F48 /* SceneDelegate.swift in Sources */,
+				5CE030AF2464428500C6B970 /* DoubleFieldCollectionViewCell.swift in Sources */,
 				29DADF73244E15160060628F /* APIRequestProtocol.swift in Sources */,
 				29DADF48244E0C130060628F /* DropdownModel.swift in Sources */,
 				5CAE602E243E166F00E4744E /* StringConstants.swift in Sources */,
@@ -1197,6 +1315,7 @@
 				29DADF60244E0C130060628F /* Switcher.swift in Sources */,
 				5CA6E05A24474F8900774A28 /* BaseObject.swift in Sources */,
 				29DADF79244E16F80060628F /* Notifications.swift in Sources */,
+				5CE030A824635E4000C6B970 /* NSObjectPropertyListExtension.swift in Sources */,
 				29DADF68244E148C0060628F /* StatusColor.swift in Sources */,
 				5C718454243B896700BF131C /* Promise.swift in Sources */,
 				5CAE6035243E2D2B00E4744E /* FieldGroup+CollectionView.swift in Sources */,
@@ -1207,7 +1326,9 @@
 				29DADF9C244F75AD0060628F /* SyncService.swift in Sources */,
 				5CAE6044243E5E4000E4744E /* TextAreaFieldCollectionViewCell.swift in Sources */,
 				29DADF5E244E0C130060628F /* PDFViewer.swift in Sources */,
+				5CF814242466003B00A644DB /* FormGroupCollectionViewCell.swift in Sources */,
 				5CAE602C243E14A100E4744E /* GradiantView.swift in Sources */,
+				5CF81427246609B600A644DB /* BaseFormGroupCell.swift in Sources */,
 				5CAE6048243E67BB00E4744E /* SwitchFieldCollectionViewCell.swift in Sources */,
 				29DADFA1244F7AD60060628F /* AwaitingAccessResponse.swift in Sources */,
 				29DADF96244E3E7A0060628F /* AccessService.swift in Sources */,
@@ -1216,6 +1337,7 @@
 				5C718455243B896700BF131C /* ApplicationErrorConst.swift in Sources */,
 				29DADF00244E0A3A0060628F /* ArrayExtension.swift in Sources */,
 				29DADF63244E0C130060628F /* SwitcherView.swift in Sources */,
+				5CF814362469F87500A644DB /* UserFormViewController.swift in Sources */,
 				29DADF99244E3F560060628F /* UserService.swift in Sources */,
 				29DADF52244E0C130060628F /* TestTableViewObject.swift in Sources */,
 				5CA6E06B24475A2400774A28 /* BaseObjectExtension.swift in Sources */,
@@ -1228,8 +1350,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C647094243D17B70013720E /* FieldModelTest.swift in Sources */,
+				5CE030A624635E1F00C6B970 /* FormModelTests.swift in Sources */,
 				2944BD242437DD7500826F48 /* InvasivesBCTests.swift in Sources */,
 				29B1E5CB2446524800C44C78 /* LocationServicesTests.swift in Sources */,
+				5CF8142E2469E4C700A644DB /* FormCollectionViewTests.swift in Sources */,
 				5CAE603F243E55D100E4744E /* FieldCellTests.swift in Sources */,
 				5CA5E57024534BA100280124 /* EntryOptionViewControllerTests.swift in Sources */,
 				5C64708E243CCBF20013720E /* DynamicValueTest.swift in Sources */,

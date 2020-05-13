@@ -325,6 +325,26 @@ extension String {
     }
 }
 
+extension String {
+
+    func snakeCased() -> String? {
+        let pattern = "([a-z0-9])([A-Z])"
+
+        let regex = try? NSRegularExpression(pattern: pattern, options: [])
+        let range = NSRange(location: 0, length: self.count)
+        return regex?.stringByReplacingMatches(in: self, options: [], range: range, withTemplate: "$1_$2").lowercased()
+    }
+    
+    func camelCaseToSentence() -> String {
+        let pattern = "([a-z0-9])([A-Z])"
+
+        let regex = try? NSRegularExpression(pattern: pattern, options: [])
+        let range = NSRange(location: 0, length: self.count)
+        let value: String = regex?.stringByReplacingMatches(in: self, options: [], range: range, withTemplate: "$1 $2") ?? self
+        return value.capitalized
+    }
+}
+
 
 typealias ReturnViewAction = (_ info: Any?) -> UIView?
 
