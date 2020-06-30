@@ -140,6 +140,9 @@ extension Field {
 // General Field View Model Class
 class FieldViewModel<T>: Field  {
     
+    // Typealias
+    typealias SelfType = FieldViewModel<T>
+    
     // FieldConfig
     var width: FieldWidthClass = .Fill
     var height: CGFloat = kStandardCellHeight
@@ -251,11 +254,22 @@ class FieldViewModel<T>: Field  {
     // Update Dependent FieldModel Objects
     func updateDependents() {}
     
+    
+   
+    
     // MARK: Destroy
     deinit {
         self.data.removeAllObservers()
         self._observers = []
         DebugLog("\(self)")
+    }
+}
+
+extension FieldViewModel where T: Equatable {
+    
+    // MARK: Operator
+    static func == (lhs: SelfType, rhs: SelfType) -> Bool {
+        return lhs.value == rhs.value
     }
 }
 
@@ -318,7 +332,52 @@ class SpacerFieldViewModel: FieldViewModel<Void> {
 }
 
 
-// DropDown Model
-class DropDownViewModel: FieldViewModel<Int> {
+/// DropDown Model
+/// Base Model
+class DropDownViewModel<T: BaseObject>: FieldViewModel<Int> {
     
+    /// List of displayable code description
+    var items: [String] {
+        return self.objects.map { $0.displayLabel }
+    }
+    
+    /// List of objects to managed by drop down
+    var objects: [T] = []
+    
+    /// Select a index in codes
+    @discardableResult
+    func select(index: Int) -> Int {
+        if objects.count > 0 && index < objects.count {
+            self.value = objects[index].remoteId
+        } else {
+            self.value = -1
+        }
+        return self.value
+    }
+    
+    /// Select an item from codes
+    @discardableResult
+    func select(item: String) -> Int {
+        if let index = items.firstIndex(of: item) {
+            self.value = index
+        } else {
+            self.value = -1
+        }
+        return self.value
+    }
+    
+    /// Filtering
+    func items(with filter: String) -> [String] {
+        return self.items.filter { $0.contains(filter) }
+    }
+}
+
+/// Dropdown based on code objects
+class CodeDropDown: DropDownViewModel<CodeObject> {
+    var codeTable: CodeTable? {
+        didSet {
+            guard let table = codeTable else { return }
+            self.objects = Array(table.codes)
+        }
+    }
 }

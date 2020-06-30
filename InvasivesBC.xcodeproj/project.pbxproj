@@ -151,6 +151,8 @@
 		5CF814362469F87500A644DB /* UserFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF814352469F87500A644DB /* UserFormViewController.swift */; };
 		5CF814382469F8B400A644DB /* UserFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF814372469F8B400A644DB /* UserFormViewModel.swift */; };
 		5CF8143A246B469300A644DB /* CodeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF81439246B469300A644DB /* CodeTable.swift */; };
+		5CF8143C246C413D00A644DB /* TestUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8143B246C413D00A644DB /* TestUtility.swift */; };
+		5CF8143E246C586300A644DB /* DropdownModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8143D246C586300A644DB /* DropdownModelTests.swift */; };
 		D7658CBF16D2EBA8CA95964B /* Pods_InvasivesBC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4C207FA6A9E731E1565C66 /* Pods_InvasivesBC.framework */; };
 /* End PBXBuildFile section */
 
@@ -319,6 +321,8 @@
 		5CF814352469F87500A644DB /* UserFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormViewController.swift; sourceTree = "<group>"; };
 		5CF814372469F8B400A644DB /* UserFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormViewModel.swift; sourceTree = "<group>"; };
 		5CF81439246B469300A644DB /* CodeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTable.swift; sourceTree = "<group>"; };
+		5CF8143B246C413D00A644DB /* TestUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtility.swift; sourceTree = "<group>"; };
+		5CF8143D246C586300A644DB /* DropdownModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownModelTests.swift; sourceTree = "<group>"; };
 		D7FBA663E9B29797DC3DFE8D /* Pods-InvasivesBCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvasivesBCTests.release.xcconfig"; path = "Target Support Files/Pods-InvasivesBCTests/Pods-InvasivesBCTests.release.xcconfig"; sourceTree = "<group>"; };
 		F82DAD2914D8DA07F6141680 /* Pods-InvasivesBC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InvasivesBC.debug.xcconfig"; path = "Target Support Files/Pods-InvasivesBC/Pods-InvasivesBC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -408,6 +412,8 @@
 				5CA5E56F24534BA100280124 /* EntryOptionViewControllerTests.swift */,
 				5CE030A524635E1F00C6B970 /* FormModelTests.swift */,
 				5CF8142D2469E4C700A644DB /* FormCollectionViewTests.swift */,
+				5CF8143B246C413D00A644DB /* TestUtility.swift */,
+				5CF8143D246C586300A644DB /* DropdownModelTests.swift */,
 			);
 			path = InvasivesBCTests;
 			sourceTree = "<group>";
@@ -1341,6 +1347,8 @@
 				5CAE603F243E55D100E4744E /* FieldCellTests.swift in Sources */,
 				5CA5E57024534BA100280124 /* EntryOptionViewControllerTests.swift in Sources */,
 				5C64708E243CCBF20013720E /* DynamicValueTest.swift in Sources */,
+				5CF8143E246C586300A644DB /* DropdownModelTests.swift in Sources */,
+				5CF8143C246C413D00A644DB /* TestUtility.swift in Sources */,
 				5CA6E07324475F2100774A28 /* UserModelTest.swift in Sources */,
 				5CAE6050243F8D9800E4744E /* FieldGroupTests.swift in Sources */,
 			);

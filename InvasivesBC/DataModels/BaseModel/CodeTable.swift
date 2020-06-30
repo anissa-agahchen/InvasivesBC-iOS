@@ -36,4 +36,18 @@ extension CodeTable {
     var codeStrings: [String] {
         return self.codes.map { $0.remoteDescription }
     }
+    
+    /// Fetcher
+    static func fetch(type: String) -> CodeTable? {
+        do {
+            let realm = try Realm()
+            let tables = realm.objects(CodeTable.self).filter("type ==  %@", type).map { $0 }
+            let found = Array(tables)
+            return found.first
+        } catch let error as NSError {
+            ErrorLog("Fetch error with type: \(type) \nError: \(error)")
+        }
+        return nil
+    }
+
 }
